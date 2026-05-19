@@ -1,0 +1,159 @@
+.bi-search{
+    color: white;    
+}
+#navbarMenu{
+    background: #3f4040 !important;
+}
+/*Cambiar color de las lineas del botón hamburguesa .navbar-toggler-icon,  en nuestro fichero de style.css ponemos:*/
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255,255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+.iconoGlobalNegro{
+    width:16px;
+    height:16px;
+    transform:rotate(180deg);
+}
+.iconoGlobal{
+    width:16px;
+    height:16px;
+    transform:rotate(180deg);
+}
+/*#CapaModelos{
+    position:sticky !important;
+    top:100px !important;
+}*/
+body:has(.aModelos:hover) #CapaModelos{
+    display:block !important;
+}
+body:has(#CapaModelos:hover) #CapaModelos{
+    display:block !important;
+}
+.nav-link3,.nav-link4{
+    display:block;
+    position:relative;
+    width:max-content;
+    transition:all 0.2s;
+    padding-left:0 !important;
+    padding-right:0 !important;
+}
+.nav-link3:hover::after{
+    content:"";
+    position:absolute;
+    width:100% !important;
+    height:2px;
+    background-color:black;
+    bottom:6px;
+    left:0;
+}
+.nav-link4{
+    padding-left:10px !important;
+    &:hover{
+        color:rgb(62,123,213);
+        text-decoration:underline;
+    }
+}
+.udl{
+    color:#3F4040 !important;
+    &:hover{
+        text-decoration:underline !important;
+        font-weight:bold;
+    }
+}
+.card{
+    background-color:#eaebec;
+    border:transparent;
+    min-width: 280px !important;
+    min-height: 340px !important;
+}
+.card:hover{
+    background-color:rgb(235,234,234);
+    cursor:pointer;
+}
+.card-top{
+    min-width: 330px !important;
+    max-width: 500px;
+    height: 130px !important;
+    background-color:rgba(179,179,178,0.719) !important;
+    top:10px;
+    & p{
+        color: white;
+        text-decoration: none !important;            
+    }  
+}
+.capa2{
+    display:none;
+}
+body:has(.hib-enchu:hover) .capa1{
+    display:none !important;
+}
+body:has(.hib-enchu:hover) .capa2{
+    display:block !important;
+}
+.vdo{
+    height: 50vh; 
+    object-fit:cover;
+}
+.p-il{
+    display: inline-block !important;
+    color: white !important;   
+    text-decoration: none  !important;
+}
+#carouselExampleDark{
+    top:0px !important;
+}
+@media(width < 1200px){
+    .opcMenus{
+        background-color:white;
+        margin:auto -12px;
+        padding:10px;
+    }
+    /*.botones{
+        background-color:black;
+    }
+    .contMenus{
+        margin-top:-7px;
+        margin-bottom:-8px;
+        padding-top:0;
+        padding-right:0;
+        padding-left:4px;
+        padding-bottom:0;
+    }
+    .aModelos{
+        position:relative !important;
+    }
+    #CapaModelos{
+        position:absolute;
+        top:80px !important;
+        left:130px !important;
+    }*/
+}
+@media(width >= 1200px){
+    #navbarMenu a{
+        color:white !important;
+    }
+    .nav-link1{
+        position:relative;
+        width:100%;
+        transition:all 0.2s;
+        padding-left:0 !important;
+        padding-right:0 !important;
+    }
+    .nav-link1:hover::after{
+        content:"";
+        position:absolute;
+        width:100% !important;
+        height:2px;
+        background-color:white;
+        bottom:6px;
+        left:0;
+    }
+    #PruCon:hover{
+        cursor:pointer;
+        color:rgba(233,235,233,0.6) !important;
+    }
+    .espacio{
+        width:200px;
+        margin-left:250px !important;
+    }
+    
+}

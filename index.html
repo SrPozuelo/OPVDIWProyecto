@@ -1,0 +1,622 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Proyecto Intermodular Óscar Pozuelo</title>
+        <link rel="stylesheet" href="webroot/css/bootstrap.min.oscar.css">
+        <link rel="stylesheet" href="webroot/css/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    </head>
+    <body>
+        <!--Barra de Header-->
+        <nav class="navbar navbar-expand-xl bg-black">
+            <div class="container-fluid">
+                <!--Lupa-->
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search ms-auto " viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                </svg>
+                <div class="d-flex align-items-center">
+                    <span class="w-25">
+                        <img class="ms-4 iconoGlobal" src="webroot/images/iconoGlobal 1.png" alt="Icono global negro">
+                    </span>
+                    <span class="text-white ms-3">Global</span>
+                </div>
+            </div>
+        </nav>
+        <!--data-bs-theme="dark"-->
+        <!--BARRA DE MENUS-->
+        <nav class="navbar navbar-expand-xl position-sticky top-0 bg-white z-3" aria-label="Menú principal" id="navbarMenu">
+            <div class="container-fluid contMenus">
+                <a class="navbar-brand me-4" href="#"><img src="webroot/images/logoBYD.svg" alt="Logo de BYD" onclick="window.location.reload()"></a>
+                <!--Lupa-->
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search ms-auto d-xl-none" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                </svg>
+                <!--Botón Hamburguesa-->
+                <button class="navbar-toggler ms-1" style="color: #3f4040 ;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="white navbar-toggler-icon" style="color:#ffffff;"></span>      
+                </button>
+                <div class="collapse navbar-collapse opcMenus d-xl-flex flex-grow-1" id="navbarNav">
+                    <ul class="navbar-nav d-xl-flex flex-grow-1 ms-xl-5">
+                        <li class="nav-item me-3 liModelos">
+                            <a class="nav-link nav-link1 active aModelos" data-bs-toggle="collapse" data-bs-target="#CapaModelos">Modelos</a>
+                            <div class="position-absolute container-fluid collapse bg-white d-none py-4 z-2" id="CapaModelos" role="menu">
+                                <div class="bg-white w-100 text-center" role="menuitem">
+                                    <div class="row align-items-start">
+                                        <div class="col-2">
+                                            <!--<div class="list-group">
+                                                <a href="" class="list-group-item list-group-item-action border-0">
+                                                    Eléctricos
+                                                    <div class="list-group">
+                                                        <a href="" class="list-group-item list-group-item-action border-0">Coches eléctricos</a>
+                                                        <a href="" class="list-group-item list-group-item-action border-0">Guía del coche electrico</a>
+                                                    </div>
+                                                </a>
+                                                <a href="" class="list-group-item list-group-item-action border-0">
+                                                    Híbridos Enchufables
+                                                    <div class="list-group">
+                                                        <a href="" class="list-group-item list-group-item-action border-0">Coches híbridos</a>
+                                                        <a href="" class="list-group-item list-group-item-action border-0">Guía del coche híbrido</a>
+                                                    </div>
+                                                </a>
+                                            </div>-->
+                                            <nav class="navbar">
+                                                <div class="container-fluid">
+                                                    <div class="offcanvas-body">
+                                                        <ul class="navbar-nav justify-content-start flex-grow-1 flex-column pe-3">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link nav-link3 fw-bold active" aria-current="page" href="#" style="color:black !important; font-weight:700;">Eléctricos</a>
+                                                                <a class="nav-link nav-link4 fw-bold" aria-current="page" href="#" style="color:black !important; font-weight:300;">Coches electricos</a>
+                                                                <a class="nav-link nav-link4 fw-bold" aria-current="page" href="#" style="color:black !important; font-weight:300;">Guía del coche eléctrico</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link nav-link3 fw-bold h-enchu" aria-current="page" href="#" style="color:black !important; font-weight:700;">Híbridos enchufables</a>
+                                                                <a class="nav-link nav-link4 fw-bold" aria-current="page" href="#" style="color:black !important; font-weight:300;">Coches híbridos</a>
+                                                                <a class="nav-link nav-link4 fw-bold" aria-current="page" href="#" style="color:black !important; font-weight:300;">Guía del coche híbrido</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </nav>
+                                        </div>
+                                        <div class="col-10 capa1">
+                                            <div class="capa1"><!--CAPA 1-->
+                                                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 row-cols-xxl-4 g-4" rows>
+                                                    <div class="col">
+                                                        <div class="card border-light">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title text-start">BYD DOLPHIN SURF</h5>
+                                                                <p class="card-text text-start">El electrico para todos</p>
+                                                                <div class="d-flex">
+                                                                    <button type="button" class="btn btn-light" data-bs-toggle="button" style="color:#5f75c1; font-weight:bold;">Ver Promoción</button>
+                                                                </div>
+                                                                <img src="./webroot/images/BYD_DOLPHIN_SURF.webp" alt="BYD_DOLPHIN_SURF" class="card-img-top">
+                                                                <div class="row g-0">
+                                                                    <div class="col">
+                                                                        <button type="button" class="btn btn-outline-dark">Detalles</button>
+                                                                    </div>
+                                                                    <div class="col">
+                                                                        <button type="button" class="btn btn-outline-dark">Configuración</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col">
+                                                        <div class="card border-light">
+                                                            <img src="./webroot/images/BYD_ATTO2.webp" alt="BYD_ATTO2" class="card-img-top">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">BYD ATTO2</h5>
+                                                                <a href="" class="card-link text-decoration-none udl">Detalles</a>
+                                                                <a href="" class="card-link text-decoration-none udl">Configuración</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col">
+                                                        <div class="card border-light">
+                                                            <img src="./webroot/images/BYD_DOLPHIN.webp" alt="BYD_DOLPHIN" class="card-img-top">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">BYD DOLPHIN</h5>
+                                                                <a href="" class="card-link text-decoration-none udl">Detalles</a>
+                                                                <a href="" class="card-link text-decoration-none udl">Configuración</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col">
+                                                        <div class="card border-light">
+                                                            <img src="./webroot/images/BYD_DOLPHIN_SURF.webp" alt="BYD_SEAL" class="card-img-top">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">BYD SEAL</h5>
+                                                                <a href="" class="card-link text-decoration-none udl">Detalles</a>
+                                                                <a href="" class="card-link text-decoration-none udl">Configuración</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col">
+                                                        <div class="card border-light">
+                                                            <img src="./webroot/images/BYD_DOLPHIN_SURF.webp" alt="BYD_ATTO_3_EVO" class="card-img-top">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">BYD ATTO 3 EVO</h5>
+                                                                <a href="" class="card-link text-decoration-none udl">Detalles</a>
+                                                                <a href="" class="card-link text-decoration-none udl">Configuración</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col">
+                                                        <div class="card border-light">
+                                                            <img src="./webroot/images/BYD_DOLPHIN_SURF.webp" alt="BYD_SEAL_U" class="card-img-top">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">BYD SEAL U</h5>
+                                                                <a href="" class="card-link text-decoration-none udl">Detalles</a>
+                                                                <a href="" class="card-link text-decoration-none udl">Configuración</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col">
+                                                        <div class="card border-light">
+                                                            <img src="./webroot/images/BYD_DOLPHIN_SURF.webp" alt="BYD_SEALION_7" class="card-img-top">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">BYD SEALION 7</h5>
+                                                                <a href="" class="card-link text-decoration-none udl">Detalles</a>
+                                                                <a href="" class="card-link text-decoration-none udl">Configuración</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col">
+                                                        <div class="card border-light">
+                                                            <img src="./webroot/images/BYD_DOLPHIN_SURF.webp" alt="BYD_TANG" class="card-img-top">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">BYD TANG</h5>
+                                                                <a href="" class="card-link text-decoration-none udl">Detalles</a>
+                                                                <a href="" class="card-link text-decoration-none udl">Configuración</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div><!--CAPA 1 -->
+                                            <div class="capa1"><!--CAPA 2-->
+                                                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5 g-4" rows>
+                                                    <div class="col">
+                                                        <div class="card border-light">
+                                                            <img src="./webroot/images/BYD-ATTO2-DMI.webp" alt="BYD_DOLPHIN_SURF" class="card-img-top">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">BYD ATTO2 DMI</h5>
+                                                                <a href="" class="card-link text-decoration-none udl">Detalles</a>
+                                                                <a href="" class="card-link text-decoration-none udl">Configuración</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col">
+                                                        <div class="card border-light">
+                                                            <img src="./webroot/images/BYD_SEAL_U_DMI.webp" alt="BYD_ATTO2" class="card-img-top">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">BYD SEAL U DMI</h5>
+                                                                <a href="" class="card-link text-decoration-none udl">Detalles</a>
+                                                                <a href="" class="card-link text-decoration-none udl">Configuración</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col">
+                                                        <div class="card border-light">
+                                                            <img src="./webroot/images/BYD_DOLPHIN_SURF.webp" alt="BYD_DOLPHIN" class="card-img-top">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">BYD SEAL 6 DMI</h5>
+                                                                <a href="" class="card-link text-decoration-none udl">Detalles</a>
+                                                                <a href="" class="card-link text-decoration-none udl">Configuración</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col">
+                                                        <div class="card border-light">
+                                                            <img src="./webroot/images/BYD_DOLPHIN_SURF.webp" alt="BYD_SEAL" class="card-img-top">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">BYD SEAL 6 DMI TOURING</h5>
+                                                                <a href="" class="card-link text-decoration-none udl">Detalles</a>
+                                                                <a href="" class="card-link text-decoration-none udl">Configuración</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div><!--CAPA 2-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item me-4">
+                            
+                        </li>
+                        <li class="nav-item me-4">
+                            <a class="nav-link nav-link1" href="#">Acerca de BYD</a>
+                        </li>
+                        <li class="nav-item me-4">
+                            <a class="nav-link nav-link1" href="#">Tecnologías</a>
+                        </li>
+                        <li class="nav-item me-4">
+                            <a class="nav-link nav-link1"  href="#">Compra</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link1"  href="#">Soporte</a>
+                        </li>
+                        <li class="nav-item opacity-0 espacio flex-grow-1">
+                            <a class="nav-link"></a>
+                        </li>
+                        <li class="nav-item nav-link2">
+                            <a class="nav-link" id="PruCon">Prueba de Conducción</a>
+                        </li>
+                        <li class="nav-item nav-link2">
+                            <a class="nav-link d-none d-xl-block">
+                                <i class="bi bi-geo-alt"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item nav-link2">
+                            <a class="nav-link" id="PruCon">Concesionarios</a>
+                        </li>
+                        <li class="nav-item nav-link2">
+                            <a class="nav-link d-none d-xl-block">
+                                <img src="./webroot/images/network-white.svg" alt="Icono de network blanco.">
+                            </a>
+                            <a class="nav-link d-xl-none d-block">
+                                <img src="./webroot/images/network-mob.svg" alt="Icono de network negro.">
+                            </a>
+                        </li>
+                        <li class="nav-item d-xl-none d-xl-block">
+                            <span class="w-25">
+                                <img class="iconoGlobalNegro" src="webroot/images/iconoGlobal 1.png" alt="Icono global negro">
+                            </span>
+                            <span class="text-black ms-3">Global</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="carouselExampleDark" class="carousel carousel-dark slide z-2" data-bs-ride="carousel">
+            <div class="carousel-indicators z-2">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="bg-light active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" class="bg-light" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" class="bg-light" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" class="bg-light" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" class="bg-light" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" class="bg-light" aria-label="Slide 6"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="6" class="bg-light" aria-label="Slide 7"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="7" class="bg-light" aria-label="Slide 8"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000">
+                    <img src="webroot/images/home_banner_1_inicio_promo_pc.webp" class="d-block w-100" alt="Imagen Inicio">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-white bg-transparent">Descuento hasta 14.325 €</h5>
+                        <p class="text-white bg-transparent">Incluye adelanto Plan Auto+. Solo hasta el 30/06</p>
+                        <button type="button" class="btn btn-outline-light">Ver promoción</button>
+                    </div>
+                </div>
+
+
+                <div class="carousel-item" data-bs-interval="5000">
+                    <video src="webroot/video/home_banner_2_atto3.mp4" class="d-block w-100 object-fit-contain" alt="BYD Atto3" autoplay loop preload="metadata"></video>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-white bg-transparent">Nuevo BYD ATTO 3 EVO</h5>
+                        <p class="text-white bg-transparent">Conduce la evolución eléctrica desde 29.355€.</p>
+                        <button type="button" class="btn btn-outline-light">Ver promoción</button>
+                    </div>
+                </div>
+
+
+                <div class="carousel-item" data-bs-interval="5000">
+                    <video src="webroot/video/home_banner_3_atto2_dmi.mp4" class="d-block w-100 object-fit-contain" alt="BYD Atto DMI" autoplay loop preload="metadata"></video>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-white bg-transparent">BYD ATTO2 DM-I</h5>
+                        <p class="text-white bg-transparent">No es un coche, es un BYD. Desde 20940€.</p>
+                        <button type="button" class="btn btn-outline-light">Ver promoción</button>
+                    </div>
+                </div>
+
+
+                <div class="carousel-item" data-bs-interval="5000">
+                    <video src="webroot/video/home_banner_4_dolphin.mp4" class="d-block w-100 object-fit-contain" alt="BYD Dolphin" autoplay loop preload="metadata"></video>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-white bg-transparent">BYD DOLPHIN SURF</h5>
+                        <p class="text-white bg-transparent">El eléctrico para todos desde 12995€.</p>
+                        <button type="button" class="btn btn-outline-light">Ver promoción</button>
+                    </div>
+                </div>
+
+
+                <div class="carousel-item" data-bs-interval="5000">
+                    <video src="webroot/video/home_banner_5_seal_dmi.mp4" class="d-block w-100 object-fit-contain" alt="BYD Seal DMI" autoplay loop preload="metadata"></video>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-white bg-transparent">BYD SEAL U DMI</h5>
+                        <p class="text-white bg-transparent">Desde 29990€ +1 año Seguro Auto Regalado.</p>
+                        <button type="button" class="btn btn-outline-light">Ver promoción</button>
+                    </div>
+                </div>
+
+
+                <div class="carousel-item" data-bs-interval="5000">
+                    <video src="webroot/video/home_banner_6_seal.mp4" class="d-block w-100 object-fit-contain" alt="BYD Seal" autoplay loop preload="metadata"></video>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-white bg-transparent">Sexto slide label</h5>
+                        <p class="text-white bg-transparent">Some representative placeholder content for the third slide.</p>
+                        <button type="button" class="btn btn-outline-light">Ver promoción</button>
+                    </div>
+                </div>
+
+
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="webroot/images/home_banner_7_atto2.webp" class="d-block w-100" alt="BYD Atto2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-white bg-transparent">Septimo slide label</h5>
+                        <p class="text-white bg-transparent">Some representative placeholder content for the third slide.</p>
+                        <button type="button" class="btn btn-outline-light">Ver promoción</button>
+                    </div>
+                </div>
+
+
+                <div class="carousel-item">
+                    <video src="webroot/video/home_banner_8_sealion.mp4" class="d-block w-100 object-fit-contain" alt="BYD Seal Lion" autoplay loop preload="metadata"></video>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-white bg-transparent">Octavo slide label</h5>
+                        <p class="text-white bg-transparent">Some representative placeholder content for the third slide.</p>
+                        <button type="button" class="btn btn-outline-light">Ver promoción</button>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-black rounded" aria-hidden="true"></span>
+                <span class="visually-hidden bg-light">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-black rounded" aria-hidden="true"></span>
+                <span class="visually-hidden bg-light">Next</span>
+            </button>
+        </div>
+        <div class="position-relative">
+            <video src="./webroot/video/VideoNuevoDesktopGamaNewUiV2.mp4" class="d-block w-100" alt="BYD Seal Lion" autoplay loop preload="metadata"></video>
+            
+            <div class="row w-100 d-flex g-4 justify-content-center position-absolute bottom-0 end-0">
+                <!--<div class="col">-->
+                    <div class="col card-top z-2 p-2 m-2 rounded-4 flex-shrink-1">
+                        <a>
+                            <span class="menu-item-header-icon">
+                                <!--IMAGEN SUPERIOR-->
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="24" cy="24" r="24" fill="white"></circle>
+                                    <path
+                                        d="M23.0821 27C23.0468 27 23.011 26.9932 22.9772 26.9796C22.8658 26.9338 22.8061 26.8222 22.8344 26.7138L23.6783 23.4985L22.1393
+                                            22.7868C22.0284 22.7351 21.9742 22.6181 22.012 22.5097L23.1701 19.1624C23.2034 19.0658 23.3019 19 23.4128 19H26.7454C26.8399 
+                                            19 26.9269 19.0481 26.9712 19.1243C27.0149 19.2009 27.0084 19.2935 26.9547 19.3642L25.1457 21.7486L26.3889 22.4571C26.4485 
+                                            22.4906 26.4898 22.5455 26.5037 22.6077C26.5177 22.6703 26.5027 22.7356 26.4625 22.7877L23.2904 26.9016C23.2412 26.9651 23.1626 
+                                            27 23.0821 27Z"
+                                        fill="black"
+                                        fill-opacity="0.8"
+                                    ></path>
+                                    <path
+                                        d="M19.2881 22.8188C19.2881 20.0545 21.5299 17.8126 24.2942 17.8126C27.0593 17.8126 29.3004 20.0545 29.3004 22.8188C29.3004 25.517 
+                                        26.7691 27.7106 24.0964 27.8153V30.5603H30.1498V32.3133C30.1498 32.801 30.258 33 30.7279 33H35.5718C36.0417 33 36.1499 32.801 36.1499 
+                                        32.3133V25.0216C36.1499 24.6691 36.0688 23.9778 35.7163 23.3135L35.2634 22.3334C35.2634 22.3334 35.7051 21.6223 36.3281 21.6223C36.8212 
+                                        21.6223 37.8835 21.6223 37.8835 21.6223C38.2727 21.6223 38.5881 21.3066 38.5881 20.9178V20.3489C38.5881 19.8292 38.1668 19.4075 37.6467 
+                                        19.4075H36.4861C35.5768 19.4075 34.8402 20.1445 34.8402 21.0535V21.4183L32.8967 17.2152C32.3955 16.1632 31.7049 15 30.234 15H18.3536C16.8832 
+                                        15 16.1926 16.1632 15.6909 17.2152L13.7478 21.4183V21.0535C13.7478 20.1445 13.0113 19.4075 12.1019 19.4075H10.9414C10.4212 19.4075 10 19.8292 
+                                        10 20.3489V20.9178C10 21.3066 10.3153 21.6223 10.7045 21.6223C10.7045 21.6223 11.7669 21.6223 12.26 21.6223C12.883 21.6223 13.3247 22.3334 
+                                        13.3247 22.3334L12.8718 23.3135C12.5189 23.9778 12.4381 24.6691 12.4381 25.0216V32.3133C12.4381 32.801 12.5464 33 13.0163 33H17.8601C18.3297 
+                                        33 18.4379 32.801 18.4379 32.3133V30.5603H24.0964V27.8153C21.4244 27.7106 19.2881 25.517 19.2881 22.8188Z"
+                                        fill="black"
+                                        fill-opacity="0.8"
+                                    >
+                                    </path>
+                                </svg>
+                            </span>
+                            <span class="text-white" style="font-weight:bold;">Tecnología</span>
+                        </a>
+                        <div class="d-flex">
+                            <div>Descrube la tecnología híbrida enchufable DM-i</div>
+                            <a>
+                                <img src="./webroot/images/IconoFlecha.svg" alt="FLECHA">
+                            </a>
+                        </div>
+                    </div>
+                <!--</div>-->
+                <!--<div class="col">-->
+                    <div class="col card-top z-2 p-2 m-2 rounded-4 flex-shrink-1">
+                        <a>
+                            <span class="menu-item-header-icon">
+                                <!--IMAGEN SUPERIOR-->
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="24" cy="24" r="24" fill="white"></circle>
+                                    <path
+                                        d="M23.0821 27C23.0468 27 23.011 26.9932 22.9772 26.9796C22.8658 26.9338 22.8061 26.8222 22.8344 26.7138L23.6783 23.4985L22.1393
+                                            22.7868C22.0284 22.7351 21.9742 22.6181 22.012 22.5097L23.1701 19.1624C23.2034 19.0658 23.3019 19 23.4128 19H26.7454C26.8399 
+                                            19 26.9269 19.0481 26.9712 19.1243C27.0149 19.2009 27.0084 19.2935 26.9547 19.3642L25.1457 21.7486L26.3889 22.4571C26.4485 
+                                            22.4906 26.4898 22.5455 26.5037 22.6077C26.5177 22.6703 26.5027 22.7356 26.4625 22.7877L23.2904 26.9016C23.2412 26.9651 23.1626 
+                                            27 23.0821 27Z"
+                                        fill="black"
+                                        fill-opacity="0.8"
+                                    ></path>
+                                    <path
+                                        d="M19.2881 22.8188C19.2881 20.0545 21.5299 17.8126 24.2942 17.8126C27.0593 17.8126 29.3004 20.0545 29.3004 22.8188C29.3004 25.517 
+                                        26.7691 27.7106 24.0964 27.8153V30.5603H30.1498V32.3133C30.1498 32.801 30.258 33 30.7279 33H35.5718C36.0417 33 36.1499 32.801 36.1499 
+                                        32.3133V25.0216C36.1499 24.6691 36.0688 23.9778 35.7163 23.3135L35.2634 22.3334C35.2634 22.3334 35.7051 21.6223 36.3281 21.6223C36.8212 
+                                        21.6223 37.8835 21.6223 37.8835 21.6223C38.2727 21.6223 38.5881 21.3066 38.5881 20.9178V20.3489C38.5881 19.8292 38.1668 19.4075 37.6467 
+                                        19.4075H36.4861C35.5768 19.4075 34.8402 20.1445 34.8402 21.0535V21.4183L32.8967 17.2152C32.3955 16.1632 31.7049 15 30.234 15H18.3536C16.8832 
+                                        15 16.1926 16.1632 15.6909 17.2152L13.7478 21.4183V21.0535C13.7478 20.1445 13.0113 19.4075 12.1019 19.4075H10.9414C10.4212 19.4075 10 19.8292 
+                                        10 20.3489V20.9178C10 21.3066 10.3153 21.6223 10.7045 21.6223C10.7045 21.6223 11.7669 21.6223 12.26 21.6223C12.883 21.6223 13.3247 22.3334 
+                                        13.3247 22.3334L12.8718 23.3135C12.5189 23.9778 12.4381 24.6691 12.4381 25.0216V32.3133C12.4381 32.801 12.5464 33 13.0163 33H17.8601C18.3297 
+                                        33 18.4379 32.801 18.4379 32.3133V30.5603H24.0964V27.8153C21.4244 27.7106 19.2881 25.517 19.2881 22.8188Z"
+                                        fill="black"
+                                        fill-opacity="0.8"
+                                    >
+                                    </path>
+                                </svg>
+                            </span>
+                            <span class="text-white" style="font-weight:bold;">Tecnología</span>
+                        </a>
+                        <div class="d-flex">
+                            <div>Descrube la tecnología híbrida enchufable DM-i</div>
+                            <a>
+                                <img src="./webroot/images/IconoFlecha.svg" alt="FLECHA">
+                            </a>
+                        </div>
+                    </div>
+                <!--</div>-->
+                <!--<div class="col">-->
+                    <div class="col card-top z-2 p-2 m-2 rounded-4 flex-shrink-1">
+                        <a>
+                            <span class="menu-item-header-icon">
+                                <!--IMAGEN SUPERIOR-->
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="24" cy="24" r="24" fill="white"></circle>
+                                    <path
+                                        d="M23.0821 27C23.0468 27 23.011 26.9932 22.9772 26.9796C22.8658 26.9338 22.8061 26.8222 22.8344 26.7138L23.6783 23.4985L22.1393
+                                            22.7868C22.0284 22.7351 21.9742 22.6181 22.012 22.5097L23.1701 19.1624C23.2034 19.0658 23.3019 19 23.4128 19H26.7454C26.8399 
+                                            19 26.9269 19.0481 26.9712 19.1243C27.0149 19.2009 27.0084 19.2935 26.9547 19.3642L25.1457 21.7486L26.3889 22.4571C26.4485 
+                                            22.4906 26.4898 22.5455 26.5037 22.6077C26.5177 22.6703 26.5027 22.7356 26.4625 22.7877L23.2904 26.9016C23.2412 26.9651 23.1626 
+                                            27 23.0821 27Z"
+                                        fill="black"
+                                        fill-opacity="0.8"
+                                    ></path>
+                                    <path
+                                        d="M19.2881 22.8188C19.2881 20.0545 21.5299 17.8126 24.2942 17.8126C27.0593 17.8126 29.3004 20.0545 29.3004 22.8188C29.3004 25.517 
+                                        26.7691 27.7106 24.0964 27.8153V30.5603H30.1498V32.3133C30.1498 32.801 30.258 33 30.7279 33H35.5718C36.0417 33 36.1499 32.801 36.1499 
+                                        32.3133V25.0216C36.1499 24.6691 36.0688 23.9778 35.7163 23.3135L35.2634 22.3334C35.2634 22.3334 35.7051 21.6223 36.3281 21.6223C36.8212 
+                                        21.6223 37.8835 21.6223 37.8835 21.6223C38.2727 21.6223 38.5881 21.3066 38.5881 20.9178V20.3489C38.5881 19.8292 38.1668 19.4075 37.6467 
+                                        19.4075H36.4861C35.5768 19.4075 34.8402 20.1445 34.8402 21.0535V21.4183L32.8967 17.2152C32.3955 16.1632 31.7049 15 30.234 15H18.3536C16.8832 
+                                        15 16.1926 16.1632 15.6909 17.2152L13.7478 21.4183V21.0535C13.7478 20.1445 13.0113 19.4075 12.1019 19.4075H10.9414C10.4212 19.4075 10 19.8292 
+                                        10 20.3489V20.9178C10 21.3066 10.3153 21.6223 10.7045 21.6223C10.7045 21.6223 11.7669 21.6223 12.26 21.6223C12.883 21.6223 13.3247 22.3334 
+                                        13.3247 22.3334L12.8718 23.3135C12.5189 23.9778 12.4381 24.6691 12.4381 25.0216V32.3133C12.4381 32.801 12.5464 33 13.0163 33H17.8601C18.3297 
+                                        33 18.4379 32.801 18.4379 32.3133V30.5603H24.0964V27.8153C21.4244 27.7106 19.2881 25.517 19.2881 22.8188Z"
+                                        fill="black"
+                                        fill-opacity="0.8"
+                                    >
+                                    </path>
+                                </svg>
+                            </span>
+                            <span class="text-white" style="font-weight:bold;">Tecnología</span>
+                        </a>
+                        <div class="d-flex">
+                            <div>Descrube la tecnología híbrida enchufable DM-i</div>
+                            <a>
+                                <img src="./webroot/images/IconoFlecha.svg" alt="FLECHA">
+                            </a>
+                        </div>
+                    </div>
+                <!--</div>-->
+            </div>
+        </div>
+        <main style="background-color:aqua;">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta facere totam expedita quas libero repellendus, fugiat molestias laborum cumque nihil sapiente dolores numquam eum provident obcaecati reiciendis, at saepe minus.
+            Accusantium dicta a, earum laboriosam officiis nemo dolores corrupti! Enim, unde culpa natus officiis tenetur tempore accusamus itaque saepe, dolor eaque dolores. Eaque vel voluptas fuga officiis dolor esse facere?
+            Recusandae quo explicabo quod! Recusandae, fuga delectus facere, eveniet itaque adipisci voluptate aliquid corrupti quod voluptatum voluptas unde dignissimos porro! Atque totam expedita ipsum eligendi pariatur! Libero nostrum praesentium possimus.
+            Perferendis qui veniam blanditiis nemo eveniet inventore, cupiditate eius ipsam ab, dolores expedita nulla esse doloremque est aliquam illum consectetur placeat, omnis quaerat veritatis consequatur voluptas quod! Deleniti, adipisci amet?
+            Nulla, quod cum. Sed eaque consequatur molestiae voluptas est temporibus tempora culpa, quibusdam amet tenetur autem cupiditate aliquid ab quia, eligendi facilis, laborum odit. Obcaecati ut veritatis mollitia iusto inventore!
+            Tenetur quae placeat aperiam numquam, molestias id nobis possimus, nemo, magni perspiciatis pariatur consequatur in fugiat blanditiis voluptate repellat ipsa labore sed saepe praesentium adipisci odit minima optio. Ut, maiores!
+            Incidunt vel adipisci est soluta quos quibusdam fugit assumenda delectus distinctio odit reiciendis nobis tenetur dolore accusamus magni nihil, et numquam quas, ipsam quisquam consequuntur fugiat corrupti possimus. Possimus, corrupti.
+            Rerum in voluptatum assumenda totam qui, eum eaque nostrum alias placeat. Porro quaerat rem a quos non ut expedita! Rem in rerum ducimus vitae odit dolorem tempora suscipit blanditiis doloribus?
+            Quia optio repellendus, perferendis dolorum, facilis excepturi quo labore nulla minima impedit esse odit quos eligendi. Assumenda recusandae ducimus molestiae error maiores, quidem consectetur qui eveniet labore, omnis ab? Recusandae.
+            Nemo at expedita quibusdam magni officiis sit, molestiae voluptatibus dolor unde ex quasi facilis repudiandae corporis delectus velit porro sed sunt ipsa cum maxime debitis vero! Repellat velit ipsam nulla.
+            Recusandae laboriosam vitae minima voluptates officia reprehenderit quaerat deleniti, accusamus cum dolorum ea alias odio, fugit, doloremque similique est facilis expedita nihil deserunt explicabo ad? Provident ea perspiciatis perferendis hic!
+            Omnis natus labore atque cupiditate, mollitia, eos doloremque assumenda voluptatum, nesciunt quod veniam repellat eligendi temporibus delectus aliquam unde. Enim totam, nam possimus quod quis nisi suscipit ea autem hic!
+            Ex nostrum modi deleniti distinctio, ipsum omnis quis molestias facere possimus libero exercitationem quasi provident ullam perspiciatis, accusantium architecto iusto aut veritatis numquam repellat nulla animi obcaecati magnam! Quasi, enim?
+            Minus voluptatibus aliquam repudiandae itaque, quos explicabo sit quas perspiciatis amet facere quidem veniam illum eaque architecto quisquam, cupiditate nobis possimus odio alias. Magni facilis quae nesciunt illum rem in.
+            Ad vel corporis nemo voluptatibus fuga neque, similique aliquam, quasi excepturi nihil iusto explicabo consectetur voluptates reiciendis numquam pariatur enim, incidunt ipsa perferendis sequi ex porro omnis provident. Maxime, eaque.
+            Natus perferendis culpa expedita reprehenderit! Repudiandae similique nam accusantium odio praesentium aliquid dolore blanditiis optio nihil rem, minus, nostrum non molestias ipsam? Commodi obcaecati repudiandae iste sed nisi delectus nesciunt!
+            Odio, possimus perspiciatis! Voluptas sint ex nihil, laudantium nesciunt quibusdam repudiandae temporibus, similique possimus maiores inventore vero fugiat autem facere obcaecati accusantium laborum numquam assumenda at facilis illo. Saepe, facere?
+            Vero aliquam dolorum cumque officiis impedit ullam soluta quisquam, dolorem non ex, molestiae cum corrupti voluptas laudantium! Voluptatum, vero architecto? Asperiores fugiat et ad maxime temporibus sequi quibusdam dolorum ratione?
+            Quam culpa rerum veritatis ea iste voluptatibus, distinctio tenetur necessitatibus asperiores perspiciatis quis beatae sint assumenda facilis itaque nam iure quae aut corrupti, dolore voluptates! Ducimus, repellat aperiam. Illo, facere?
+            Illo quasi recusandae laudantium? Eligendi aliquid odit quia recusandae! Consequuntur magnam suscipit assumenda laudantium doloremque itaque praesentium sit, quis voluptates sequi dolore fugiat voluptas, quae nesciunt. Maxime eveniet quasi numquam?
+            Officia iste deserunt fuga odit quis, saepe earum necessitatibus voluptatem amet sit eos aliquid maxime quaerat! Nostrum iure culpa odit sunt natus molestiae totam voluptatibus eveniet, quis illum aut hic!
+            Earum dolorum quam accusantium? Deserunt distinctio eos pariatur odit? Quas, excepturi. Quos possimus numquam quod impedit ipsa molestias saepe non nihil doloribus, illo laborum sit distinctio amet autem adipisci! Temporibus.
+            Optio pariatur mollitia harum corrupti odit omnis ab cum molestiae rerum aliquid nesciunt, iusto officiis similique, dolore quidem? Iusto facilis sint consequuntur laudantium nemo maiores, eius quae aperiam earum optio!
+            Necessitatibus quidem adipisci nobis quam culpa excepturi totam et, tempore quae, sequi recusandae ea! Voluptate, exercitationem nihil ad rerum accusamus labore facilis recusandae eaque, molestiae quia praesentium, commodi suscipit veniam?
+            Ex recusandae quisquam, pariatur sit assumenda ad laborum doloremque repellendus nobis excepturi blanditiis, et aliquam deleniti exercitationem beatae quam impedit eum omnis. Odio sapiente molestias tempora nostrum cum repudiandae necessitatibus.
+            Perferendis nihil nam pariatur minus quasi in non deleniti consequuntur maiores temporibus possimus nulla voluptatum ea dolorem voluptas praesentium alias tenetur illo obcaecati iure explicabo, impedit libero similique aut. Dignissimos.
+            Modi fugit dolorum voluptas amet tempore similique omnis ipsam reprehenderit porro sequi. Vero quos minus fugit laudantium nihil nemo sit labore reprehenderit rerum, quia earum pariatur obcaecati! Rerum, dicta eligendi?
+            Labore cum minus quas rem suscipit quam nemo vero unde soluta deleniti, eum eius reprehenderit! Facere blanditiis sit dolor labore repudiandae dolores accusamus beatae eveniet ut ducimus? Aliquam, adipisci saepe.
+            Nostrum dicta nemo assumenda eligendi fuga modi nihil tempore a eaque ratione, ducimus debitis beatae voluptas hic mollitia eius voluptatibus? Magnam placeat obcaecati quidem nulla similique ipsam cumque, tenetur adipisci.
+            Doloremque voluptas laboriosam quidem et natus doloribus repellat repellendus architecto voluptatum. At molestiae, ipsam in harum expedita voluptate aut voluptates ducimus laborum, a esse dolores veniam alias porro nobis vero.
+            Autem blanditiis soluta voluptatum officiis animi nisi corporis cupiditate aspernatur voluptas nihil nobis, quaerat a doloribus eaque dolorem laudantium vero quae laborum rerum laboriosam accusantium? Eligendi nisi eveniet ducimus velit.
+            Ea similique voluptas dolor, eaque optio omnis repellendus assumenda dignissimos vel rerum velit, placeat accusamus culpa rem quam consectetur laudantium? Nihil, architecto quod. Error minima voluptatibus voluptates maxime, quia deleniti.
+            Officiis sed eligendi debitis sint cumque corrupti laudantium beatae ipsam et. Voluptate accusamus debitis illum amet sint perspiciatis molestias excepturi? Sit tenetur quia reiciendis facere doloribus eius laboriosam assumenda saepe.
+            Corrupti nihil numquam, eius deleniti quis rem nisi mollitia, repudiandae corporis possimus nemo. Debitis temporibus nemo, vero numquam accusantium dolor, non, sequi unde quasi dignissimos recusandae. Eius tenetur vel soluta?
+            Incidunt voluptatum quibusdam blanditiis eveniet assumenda, modi illum veniam reprehenderit veritatis sunt, quis molestiae consequuntur enim. In excepturi eum esse. Dolor iure rem repudiandae modi, sequi odit tenetur aspernatur. Velit?
+            Maiores neque explicabo asperiores error. Aspernatur illo aliquid fugiat! Asperiores, nulla architecto! Laborum possimus doloremque mollitia exercitationem corporis, saepe dolorem obcaecati nisi est dolorum at reprehenderit, ipsa rerum voluptatum non.
+            Vel dolorum sunt cum, molestiae hic et quis natus illo quaerat explicabo vitae. Earum sed quis fuga omnis expedita placeat nostrum aspernatur soluta, quibusdam, facere suscipit quas perspiciatis. Non, fugiat.
+            Quisquam quas necessitatibus cum maxime blanditiis ipsa repellendus vero. Eum incidunt quae odio facilis iusto nesciunt ad, pariatur ex amet reiciendis magnam harum accusantium recusandae, beatae consectetur dolore sunt? Temporibus?
+            Debitis corrupti distinctio cum laborum commodi, nesciunt voluptatibus reiciendis iure fuga eius soluta laboriosam doloremque cupiditate beatae aut ut nam tempore molestias, quisquam ipsam, est sed. Fuga asperiores voluptatibus error.
+            Et corrupti vero, repellat animi itaque aliquam nemo alias autem sint eos maiores atque obcaecati fugit. Est, quae impedit pariatur repudiandae vitae adipisci ipsa nobis provident asperiores ipsam? Itaque, explicabo?
+            Iure, eligendi tempore cupiditate, accusamus, deserunt quibusdam rerum vero repellendus corrupti assumenda voluptate incidunt nobis tenetur. Dignissimos, repellat? Error aspernatur voluptate, sunt illum quo quibusdam consequuntur? Ipsum illum fugit optio?
+            Cupiditate porro, totam, unde laboriosam blanditiis error rerum itaque dolores dolorum ipsam quod laudantium harum. Cupiditate eveniet rem, ab voluptate, minima deserunt iste, error distinctio nihil porro nisi exercitationem quis?
+            Saepe blanditiis temporibus quam accusantium sed mollitia necessitatibus cumque vitae laborum provident iure veritatis, tempore impedit in nesciunt voluptatum iste nulla ratione repellendus ex nostrum cupiditate. Quidem ut eum quaerat.
+            Culpa autem nihil, vel repudiandae eligendi aut fuga ut ducimus tempora cumque laboriosam fugiat mollitia natus quos veritatis! Facilis officia qui laudantium adipisci molestiae minima illum nulla nemo perspiciatis nobis.
+            Voluptates earum aut ut dolor, saepe obcaecati quia illum aliquid, debitis autem animi error eos tempora, minima veniam quae? Quae accusantium corrupti incidunt! Quasi voluptatum perferendis explicabo blanditiis veniam ut.
+            Est, ab. Accusamus, ullam magnam ut mollitia a recusandae nulla excepturi dolorum! Ut quibusdam culpa vitae veritatis voluptatem rem accusamus, omnis nihil quia fugit placeat corporis voluptates eum illo adipisci.
+            Quaerat soluta necessitatibus quis accusamus modi laboriosam blanditiis accusantium tempore, quam dolorum eligendi vero id cum veritatis quo doloribus rem. Aliquid molestias quo tempora ab ducimus quas similique exercitationem minima?
+            Quia reprehenderit placeat provident minima maiores dicta est inventore earum. Itaque modi, cumque harum corporis quaerat, fuga ullam accusantium, veritatis quam nam odit porro. Dicta nam ad autem. Architecto, explicabo?
+            Ipsum expedita numquam amet? Laborum adipisci vel saepe minima dolore corrupti mollitia, perspiciatis at aperiam ex neque, provident aliquam qui libero error quisquam? Voluptates corrupti enim tenetur omnis itaque modi?
+            Impedit, pariatur accusamus. Porro voluptate nihil quia aspernatur dolore amet dignissimos odit, quae necessitatibus molestias. Id aliquam dolor doloribus perferendis officiis animi eaque cum iste ad, ipsa numquam dolores blanditiis?
+            A incidunt natus placeat quasi ullam quidem tenetur architecto facere, quae iure, aspernatur maiores sunt ea dignissimos sequi magni quia, ab veniam doloribus? Amet quasi itaque magni placeat reiciendis repellat!
+            Doloribus rem corporis error harum cum! Libero soluta, ex, optio consequatur fugit illo pariatur blanditiis fugiat eligendi quod facere sunt quis beatae perferendis voluptate aliquid quisquam deleniti ea deserunt numquam!
+            Molestias sed aliquid magni, ab provident sit officiis sint aut perspiciatis aliquam iure dolor illum dolore, enim iusto recusandae deleniti minus reprehenderit repellat repellendus. Cumque libero doloremque optio harum provident?
+            Vel facilis odit repudiandae culpa voluptas odio cupiditate distinctio dolore sunt, ratione obcaecati sapiente at necessitatibus rem illo quo iste corporis iure delectus ut, numquam qui repellendus id molestias. Officia.
+            Molestias consequuntur quod nam modi asperiores? Ad quasi totam ullam accusamus perspiciatis libero ipsam alias repudiandae soluta sed, ducimus distinctio qui earum dolores vel vitae, cum optio. Repudiandae, iste non?
+            Suscipit sapiente doloremque nemo ipsum ipsam illo facere delectus assumenda voluptates! Facere libero unde ratione quidem eos nisi voluptatem inventore perspiciatis eveniet laborum ipsam, facilis mollitia excepturi modi eum distinctio.
+            Ad ab unde repellendus officiis rerum ea asperiores eveniet quos? Odio similique numquam culpa. Iure tenetur, tempore eveniet ipsam deleniti illum modi ad quia quibusdam commodi, amet rem. Quod, adipisci.
+            Obcaecati soluta sequi quis laboriosam, esse autem est eaque iusto consectetur! Asperiores animi cum rem hic rerum optio. Necessitatibus quod voluptas nostrum repellendus, a officiis nulla? Laborum pariatur a minima?
+            Autem, maiores. Incidunt perspiciatis quia ratione sunt. Eius dolor voluptate nam! Eum labore dolorum, est soluta sint mollitia, repudiandae, fugit quos laboriosam veniam minus corrupti. In nisi ratione dolores odio?
+            Esse, tempore? Maxime assumenda qui et omnis, placeat tempore eaque totam sunt in dolores corrupti rerum soluta, earum possimus ipsa voluptates veniam. Explicabo beatae consequatur accusamus eaque eveniet quos architecto.
+            Ab quam ex laudantium est laboriosam reprehenderit autem ratione, quos nisi deserunt, eum quas quo ducimus iure iusto! Alias dolorem asperiores ab dignissimos aperiam distinctio possimus tempora, nihil perspiciatis aspernatur.
+            Non dolores inventore molestias quibusdam similique eligendi, deserunt est dolorem magnam voluptate error libero quas excepturi. Blanditiis voluptatibus possimus sapiente aut id, dolorem provident. Cupiditate aut blanditiis nam temporibus maiores.
+            Facere, ullam at nostrum, quisquam quo natus blanditiis eaque odit quis iste ea excepturi explicabo quidem laboriosam. A animi similique blanditiis ab consequatur natus veniam dolore quam? Quasi, similique autem.
+            Repellat ipsam expedita perspiciatis adipisci recusandae dolorum voluptate, tenetur est maiores hic modi, vero minus vitae atque delectus sint quis? Assumenda quos adipisci, esse perferendis dignissimos fuga nesciunt odit sunt.
+            Pariatur fugiat aspernatur quas enim repellat animi tempore aliquid eligendi cumque ipsum in illum doloribus, autem a doloremque hic adipisci laborum non, corporis at, veritatis minima. Voluptatem quasi neque molestiae.
+            Officiis magni molestiae ea cum tempore cumque eligendi nisi facere, illo ipsam quae non, culpa architecto dolore, aspernatur porro dignissimos facilis sed nam ad tempora incidunt corrupti dicta quidem? Sint.
+            Beatae nisi quos assumenda id ipsam et voluptate nostrum exercitationem iste reiciendis velit enim aspernatur numquam eaque quia veritatis maxime, debitis ab voluptas dicta magnam accusamus rerum! Praesentium, magnam voluptatibus.
+            Repellendus nostrum ducimus neque nisi dicta doloremque a porro officiis, corrupti nam consequuntur deserunt hic consectetur beatae! Ipsam veniam alias maiores, sunt quidem facilis labore expedita. Veritatis cum ea dolore.
+            In non ipsam eveniet minus officiis error id ipsa, asperiores ut dolor mollitia nam ab similique qui eius nihil maiores necessitatibus debitis accusantium et deleniti quisquam autem soluta? Architecto, voluptas.
+            Quam fugiat placeat obcaecati, expedita odio, magni quos aut, est nisi aliquid error illum facere. Nihil beatae vero aliquid? Impedit numquam perferendis earum dolore voluptates tenetur accusamus dolorem totam rem.
+            Ipsam non saepe officiis vel tempora voluptates ut. Possimus sapiente eos saepe, deleniti odio atque adipisci sed omnis sint id nesciunt aliquid explicabo consectetur in magnam tenetur impedit cupiditate vitae.
+            Reprehenderit suscipit harum, deserunt quae modi voluptate laudantium eum tempora accusantium voluptates officia inventore dolorem? Minus eaque placeat nisi rerum iste incidunt, et sed, inventore reiciendis quo perferendis vero veniam.
+            Quod eos tempore blanditiis aliquam. Doloribus eius totam cumque hic perferendis temporibus, impedit dolorem laboriosam explicabo rem excepturi minima quis nemo, animi facere deserunt cum nostrum. Tempora consequuntur ut placeat?
+            Vitae laboriosam dignissimos reprehenderit repellat, sint quia, est, iure minus nostrum earum aspernatur repellendus. Ipsam odio rem molestias id vitae! Laudantium exercitationem est nesciunt minus sunt? Culpa placeat sequi incidunt?
+            Eum architecto voluptas voluptatum totam aut? Sint quos aliquam voluptates amet nesciunt molestias debitis itaque dolorum sequi corporis, officia accusamus explicabo nobis dolorem vero illum omnis nulla voluptatum porro id?
+            Eligendi quaerat vel beatae mollitia earum magni voluptatibus minus provident! Commodi sit, esse suscipit ipsum sed labore numquam error animi autem, doloremque qui nisi facilis quae sapiente nesciunt aperiam nobis.
+            Debitis, magnam. Perspiciatis tempora iste non sed dolores, nisi quis illo voluptatum officiis quidem, aliquam voluptas sunt quae ipsa minima culpa consectetur? Odit suscipit unde reiciendis, iure quo quasi quaerat.
+            Laudantium est adipisci soluta a pariatur, mollitia quod minus sapiente laboriosam optio, placeat ratione tenetur perferendis maiores totam iusto eos inventore necessitatibus ea ab nisi, fuga facilis amet non. Ducimus?
+            Nam, neque blanditiis odit quisquam ipsum voluptatem incidunt consectetur, ipsa in culpa deserunt laboriosam eaque itaque tempora voluptatum reprehenderit, saepe fugit est repellat hic eum eligendi corporis autem. Mollitia, ex.
+            Veniam quo incidunt repellat quas eveniet architecto ea cumque iure praesentium distinctio, dicta fugiat voluptates mollitia et nihil facilis minus tenetur corrupti enim suscipit eaque qui debitis! Ex, blanditiis a!
+            Hic cum officia voluptatum rem maiores repudiandae veritatis similique ab ea magnam minus ducimus voluptatem in commodi et excepturi eveniet nihil nam, fugit iste amet a provident. Reiciendis, commodi quos?
+            Sed ut inventore accusantium, aperiam eos atque labore sunt unde mollitia itaque recusandae libero non fugiat quam assumenda quasi quisquam repudiandae, minus tempore. Sequi voluptas veniam beatae rerum id laudantium!
+            Veritatis amet nemo odit quisquam a maxime est ratione, sequi porro obcaecati omnis error voluptatibus totam? Eaque dolorum tempore, perferendis expedita quod esse, laborum exercitationem natus fugit vel veniam et.
+            Commodi dolorum voluptatem earum sit totam recusandae aut, omnis fuga dolores id rem saepe animi in tempora accusamus blanditiis unde quaerat sint deserunt consequuntur a nesciunt aliquid quibusdam! Atque, ipsam?
+            Placeat eos omnis deleniti saepe perspiciatis distinctio blanditiis asperiores unde tempora? Omnis modi, iure quibusdam possimus sed pariatur velit illo perferendis placeat ad blanditiis neque accusamus quisquam reprehenderit cupiditate nam?
+            Facere architecto eveniet corporis numquam dolor eius, quidem vel consequatur eum odio voluptas officia deserunt labore! Voluptatibus accusantium, sint nam esse quas eos nihil iste libero animi quos mollitia quam?
+            Quasi assumenda ipsum a qui reiciendis? Quidem, distinctio pariatur! Eos sint magnam nam veniam assumenda, possimus iure repudiandae quaerat rerum nisi molestiae quo minima laboriosam? Eius necessitatibus placeat aliquam architecto!
+            Inventore, consequatur assumenda. Asperiores rerum aliquid eius fuga, libero sit, quam ipsum aspernatur harum laborum maiores quas sunt, qui error exercitationem repudiandae corporis deleniti. Ullam illo excepturi qui dolor natus.
+            Praesentium sunt laudantium minus, maiores voluptate libero commodi neque rerum exercitationem optio ratione dolorem deleniti rem, facere numquam distinctio consequuntur animi sequi, itaque magnam dolor est? Consequuntur assumenda harum odio!
+            Quas odit sapiente tempora debitis rem, quibusdam dolorem, delectus magni ratione fugit ad numquam quasi ex. Delectus eum, eos mollitia blanditiis commodi at provident minima ducimus cupiditate tempore veritatis sit.
+            Sequi unde aspernatur adipisci voluptas consequuntur sit consectetur perferendis maxime, quae dignissimos est officiis optio fugiat? Quos nisi repellendus reprehenderit itaque voluptates quibusdam quisquam, aspernatur minima optio iste provident nobis?
+            Itaque sequi blanditiis cupiditate obcaecati fugiat earum rerum eum? Maxime atque cum accusantium? Ipsum, dolorum quae officiis eius non voluptate cumque vero ullam. Dolorem tempora saepe accusantium sint cum molestias?
+            Eveniet dolores deleniti corrupti veritatis quae, blanditiis voluptas dolorem rerum explicabo sapiente placeat, aut dolorum suscipit doloribus? Expedita quibusdam aut rem qui optio itaque obcaecati tempora, dignissimos corrupti maiores eius.
+            Eaque tempore non nam ducimus consectetur debitis amet corrupti mollitia aspernatur illo? Repellendus neque nobis incidunt voluptas, vero id eligendi maiores voluptates enim consequatur odio necessitatibus, voluptatibus a velit natus.
+            Error autem fugit consequuntur consequatur dolores aspernatur rerum, inventore nihil beatae veritatis maxime enim quasi. Consequatur facilis saepe a ipsa, porro praesentium quidem, ea odit magni quisquam corporis delectus ad.
+            Velit, eveniet impedit ab aspernatur nihil molestias, vel explicabo consequuntur, modi magni asperiores. Tempore vitae reprehenderit unde error, nesciunt non vero doloremque illo, deleniti eum natus qui ipsam aliquid architecto.
+            Dolorem, earum perspiciatis. Est aspernatur cumque vero, ea fugiat magni perferendis assumenda amet vitae porro temporibus reiciendis at neque earum ducimus commodi perspiciatis beatae velit ex non. Rerum, a recusandae!
+            Quisquam nam cum, ex expedita velit commodi dolore repellat quas sapiente fuga non iste quaerat. Iure, enim assumenda? Omnis error illo ullam ipsum perferendis aut, sunt nulla quidem vel inventore?
+            Natus vero iste reprehenderit maxime. Similique, voluptate distinctio numquam cupiditate beatae explicabo inventore dolores ipsa ducimus natus vitae odio libero voluptas odit. Fuga, aliquid doloremque? Officiis possimus sapiente modi recusandae.
+            Iste doloribus deserunt maxime et fugiat praesentium amet officiis quia architecto laborum odit vitae non fuga, doloremque dolores sunt aperiam similique nobis blanditiis corrupti ipsa libero minus. Ratione, fuga dolorem.
+        </main>
+        <iframe src="./doc/220527PlantillaDocumentaciónProyecto.pdf" frameborder="0" width="50%" height="900px"></iframe>
+        <!-- CAROUSEL -->
+        <script src="webroot/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
