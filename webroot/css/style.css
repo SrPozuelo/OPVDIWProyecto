@@ -71,7 +71,7 @@ body:has(#CapaModelos:hover) #CapaModelos{
 }
 .card-top{
     min-width: 330px !important;
-    max-width: 500px;
+    max-width: 400px;
     height: 130px !important;
     background-color:rgba(179,179,178,0.719) !important;
     top:10px;
@@ -98,8 +98,22 @@ body:has(.hib-enchu:hover) .capa2{
     color: white !important;   
     text-decoration: none  !important;
 }
+.tecnologia{
+    background-size:100% 100%;
+    background-position:center top;
+    background-repeat:no-repeat;
+}
+img{
+    display:block;
+    max-width:100%;
+}
 #carouselExampleDark{
     top:0px !important;
+}
+.Sabermas:hover{
+    background-color:white !important;
+    color:black !important;
+    transition:all .5s;
 }
 @media(width < 1200px){
     .opcMenus{
@@ -155,5 +169,4 @@ body:has(.hib-enchu:hover) .capa2{
         width:200px;
         margin-left:250px !important;
     }
-    
 }
