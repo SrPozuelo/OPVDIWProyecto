@@ -115,6 +115,20 @@ img{
     color:black !important;
     transition:all .5s;
 }
+.col8{
+    font-size:1.2rem !important;
+}
+.der{
+    text-decoration:none;
+}
+.col8 p:hover,.der:hover{
+    color:white !important;
+    cursor:pointer;
+    transition:all 0.5s ease-in-out;
+}
+.der-border{
+    border-top:2px solid rgb(102,101,101);
+}
 @media(width < 1200px){
     .opcMenus{
         background-color:white;

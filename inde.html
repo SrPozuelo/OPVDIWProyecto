@@ -1,0 +1,721 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Proyecto Intermodular Óscar Pozuelo</title>
+        <link rel="stylesheet" href="webroot/css/bootstrap.min.oscar.css">
+        <link rel="stylesheet" href="webroot/css/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    </head>
+    <body>
+        <!--Barra de Header-->
+        <nav class="navbar navbar-expand-xl bg-black">
+            <div class="container-fluid">
+                <!--Lupa-->
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search ms-auto " viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                </svg>
+                <img src="./webroot/images/bootstrap.png" alt="Logo de Bootstrap" class="img-fluid d-block mx-3" style="max-width:50px; height:auto;">
+                <div class="d-flex align-items-center">
+                    <span class="w-25">
+                        <img class="ms-4 iconoGlobal" src="webroot/images/iconoGlobal 1.png" alt="Icono global negro">
+                    </span>
+                    <span class="text-white ms-3">Global</span>
+                </div>
+            </div>
+        </nav>
+        <!--data-bs-theme="dark"-->
+        <!--BARRA DE MENUS-->
+        <nav class="navbar navbar-expand-xl position-sticky top-0 bg-white z-3" aria-label="Menú principal" id="navbarMenu">
+            <div class="container-fluid contMenus">
+                <a class="navbar-brand me-4" href="#"><img src="webroot/images/logoBYD.svg" alt="Logo de BYD" onclick="window.location.reload()"></a>
+                <img src="./webroot/images/bootstrap.png" alt="Logo de Bootstrap" class="img-fluid d-block mx-3" style="max-width:50px; height:auto;">
+                <!--Lupa-->
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search ms-auto d-xl-none" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                </svg>
+                <!--Botón Hamburguesa-->
+                <button class="navbar-toggler ms-1" style="color: #3f4040 ;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="white navbar-toggler-icon" style="color:#ffffff;"></span>      
+                </button>
+                <div class="collapse navbar-collapse opcMenus d-xl-flex flex-grow-1" id="navbarNav">
+                    <ul class="navbar-nav d-xl-flex flex-grow-1 ms-xl-5">
+                        <li class="nav-item me-3 liModelos">
+                            <a class="nav-link nav-link1 active aModelos" data-bs-toggle="collapse" data-bs-target="#CapaModelos">Modelos</a>
+                            <div class="position-absolute container-fluid collapse bg-white d-none py-4 z-2" id="CapaModelos" role="menu">
+                                <div class="bg-white w-100 text-center" role="menuitem">
+                                    <div class="row align-items-start">
+                                        <div class="col-2">
+                                            <!--<div class="list-group">
+                                                <a href="" class="list-group-item list-group-item-action border-0">
+                                                    Eléctricos
+                                                    <div class="list-group">
+                                                        <a href="" class="list-group-item list-group-item-action border-0">Coches eléctricos</a>
+                                                        <a href="" class="list-group-item list-group-item-action border-0">Guía del coche electrico</a>
+                                                    </div>
+                                                </a>
+                                                <a href="" class="list-group-item list-group-item-action border-0">
+                                                    Híbridos Enchufables
+                                                    <div class="list-group">
+                                                        <a href="" class="list-group-item list-group-item-action border-0">Coches híbridos</a>
+                                                        <a href="" class="list-group-item list-group-item-action border-0">Guía del coche híbrido</a>
+                                                    </div>
+                                                </a>
+                                            </div>-->
+                                            <nav class="navbar">
+                                                <div class="container-fluid">
+                                                    <div class="offcanvas-body">
+                                                        <ul class="navbar-nav justify-content-start flex-grow-1 flex-column pe-3">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link nav-link3 fw-bold active" aria-current="page" href="#" style="color:black !important; font-weight:700;">Eléctricos</a>
+                                                                <a class="nav-link nav-link4 fw-bold" aria-current="page" href="#" style="color:black !important; font-weight:300;">Coches electricos</a>
+                                                                <a class="nav-link nav-link4 fw-bold" aria-current="page" href="#" style="color:black !important; font-weight:300;">Guía del coche eléctrico</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link nav-link3 fw-bold hib-enchu" aria-current="page" href="#" style="color:black !important; font-weight:700;">Híbridos enchufables</a>
+                                                                <a class="nav-link nav-link4 fw-bold" aria-current="page" href="#" style="color:black !important; font-weight:300;">Coches híbridos</a>
+                                                                <a class="nav-link nav-link4 fw-bold" aria-current="page" href="#" style="color:black !important; font-weight:300;">Guía del coche híbrido</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </nav>
+                                        </div>
+                                        <div class="col-10">
+                                            <div class="capa1"><!--CAPA 1-->
+                                                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 row-cols-xxl-4 g-4" rows>
+                                                    <div class="col">
+                                                        <div class="card border-light">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title text-start">BYD DOLPHIN SURF</h5>
+                                                                <p class="card-text text-start">El electrico para todos</p>
+                                                                <div class="d-flex">
+                                                                    <button type="button" class="btn btn-light" data-bs-toggle="button" style="color:#5f75c1; font-weight:bold;">Ver Promoción</button>
+                                                                </div>
+                                                                <img src="./webroot/images/BYD_DOLPHIN_SURF.webp" alt="BYD_DOLPHIN_SURF" class="card-img-top">
+                                                                <div class="row g-0">
+                                                                    <div class="col">
+                                                                        <button type="button" class="btn btn-outline-dark">Detalles</button>
+                                                                    </div>
+                                                                    <div class="col">
+                                                                        <button type="button" class="btn btn-outline-dark">Configuración</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col">
+                                                        <div class="card border-light">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title text-start">BYD ATTO2</h5>
+                                                                <p class="card-text text-start">El SUV compacto eléctrico</p>
+                                                                <div class="d-flex">
+                                                                    <button type="button" class="btn btn-light" data-bs-toggle="button" style="color:#5f75c1; font-weight:bold;">Ver Promoción</button>
+                                                                </div>
+                                                                <img src="./webroot/images/BYD_ATTO2.webp" alt="BYD_ATTO2" class="card-img-top">
+                                                                <div class="row g-0">
+                                                                    <div class="col">
+                                                                        <button type="button" class="btn btn-outline-dark">Detalles</button>
+                                                                    </div>
+                                                                    <div class="col">
+                                                                        <button type="button" class="btn btn-outline-dark">Configuración</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col">
+                                                        <div class="card border-light">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title text-start">BYD DOLPHIN</h5>
+                                                                <p class="card-text text-start">El compacto eléctrico versátil</p>
+                                                                <div class="d-flex">
+                                                                    <button type="button" class="btn btn-light" data-bs-toggle="button" style="color:#5f75c1; font-weight:bold;">Ver Promoción</button>
+                                                                </div>
+                                                                <img src="./webroot/images/BYD_DOLPHIN.webp" alt="BYD_DOLPHIN" class="card-img-top">
+                                                                <div class="row g-0">
+                                                                    <div class="col">
+                                                                        <button type="button" class="btn btn-outline-dark">Detalles</button>
+                                                                    </div>
+                                                                    <div class="col">
+                                                                        <button type="button" class="btn btn-outline-dark">Configuración</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col">
+                                                        <div class="card border-light">
+                                                                <div class="card-body">
+                                                                    <h5 class="card-title text-start">BYD SEAL</h5>
+                                                                    <p class="card-text text-start">La berlina eléctrica deportiva</p>
+                                                                    <div class="d-flex">
+                                                                        <button type="button" class="btn btn-light" data-bs-toggle="button" style="color:#5f75c1; font-weight:bold;">Ver Promoción</button>
+                                                                    </div>
+                                                                    <img src="./webroot/images/BYD_SEAL_2026.webp" alt="BYD_SEAL" class="card-img-top">
+                                                                    <div class="row g-0">
+                                                                    <div class="col">
+                                                                        <button type="button" class="btn btn-outline-dark">Detalles</button>
+                                                                    </div>
+                                                                    <div class="col">
+                                                                        <button type="button" class="btn btn-outline-dark">Configuración</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col">
+                                                        <div class="card border-light">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title text-start">BYD ATTO 3 EVO</h5>
+                                                                <p class="card-text text-start">La revolución SUV mediano eléctrico</p>
+                                                                <div class="d-flex">
+                                                                    <button type="button" class="btn btn-light" data-bs-toggle="button" style="color:#5f75c1; font-weight:bold;">Ver Promoción</button>
+                                                                </div>
+                                                                <img src="./webroot/images/BYD_ATTO3_EVO.webp" alt="BYD_ATTO_3_EVO" class="card-img-top">
+                                                                <div class="row g-0">
+                                                                    <div class="col">
+                                                                        <button type="button" class="btn btn-outline-dark">Detalles</button>
+                                                                    </div>
+                                                                    <div class="col">
+                                                                        <button type="button" class="btn btn-outline-dark">Configuración</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col">
+                                                        <div class="card border-light">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">BYD SEAL U EVO</h5>
+                                                                <p class="card-text text-start">El SUV familiar eléctrico</p>
+                                                                <div class="d-flex">
+                                                                    <button type="button" class="btn btn-light" data-bs-toggle="button" style="color:#5f75c1; font-weight:bold;">Ver Promoción</button>
+                                                                </div>
+                                                                <img src="./webroot/images/BYD_SEAL_U_EV.webp" alt="BYD_SEAL_U_EV" class="card-img-top">
+                                                                <div class="row g-0">
+                                                                    <div class="col">
+                                                                        <button type="button" class="btn btn-outline-dark">Detalles</button>
+                                                                    </div>
+                                                                    <div class="col">
+                                                                        <button type="button" class="btn btn-outline-dark">Configuración</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col">
+                                                        <div class="card border-light">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title text-start">BYD SEALION 7</h5>
+                                                                <p class="card-text text-start">El SUV eléctrico deportivo</p>
+                                                                <div class="d-flex">
+                                                                    <button type="button" class="btn btn-light" data-bs-toggle="button" style="color:#5f75c1; font-weight:bold;">Ver Promoción</button>
+                                                                </div>
+                                                                <img src="./webroot/images/BYD_SEALION_7.webp" alt="BYD_SEALION_7" class="card-img-top">
+                                                                <div class="row g-0">
+                                                                    <div class="col">
+                                                                        <button type="button" class="btn btn-outline-dark">Detalles</button>
+                                                                    </div>
+                                                                    <div class="col">
+                                                                        <button type="button" class="btn btn-outline-dark">Configuración</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col">
+                                                        <div class="card border-light">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title text-start">BYD TANG</h5>
+                                                                <p class="card-text text-start">Un coche eléctrico versátil de 7 plazas</p>
+                                                                <div class="d-flex">
+                                                                    <button type="button" class="btn btn-light" data-bs-toggle="button" style="color:#5f75c1; font-weight:bold;">Ver Promoción</button>
+                                                                </div>
+                                                                <img src="./webroot/images/BYD_TANG_2024.webp" alt="BYD_TANG" class="card-img-top">
+                                                                <div class="row g-0">
+                                                                    <div class="col">
+                                                                        <button type="button" class="btn btn-outline-dark">Detalles</button>
+                                                                    </div>
+                                                                    <div class="col">
+                                                                        <button type="button" class="btn btn-outline-dark">Configuración</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div><!--CAPA 1 -->
+                                            <div class="capa2"><!--CAPA 2-->
+                                                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5 g-4" rows>
+                                                    <div class="col">
+                                                        <div class="card border-light">
+                                                            
+                                                            <div class="card-body">
+                                                                <h5 class="card-title text-start">BYD ATTO2 DMI</h5>
+                                                                <p class="card-text text-start">SUV compacto híbrido enchufable</p>
+                                                                <div class="d-flex">
+                                                                    <button type="button" class="btn btn-light" data-bs-toggle="button" style="color:#5f75c1; font-weight:bold;">Ver Promoción</button>
+                                                                </div>
+                                                                <img src="./webroot/images/BYD-ATTO2-DMI.webp" alt="BYD ATTO2 DMI" class="card-img-top">
+                                                                <div class="row g-0">
+                                                                    <div class="col">
+                                                                        <button type="button" class="btn btn-outline-dark">Detalles</button>
+                                                                    </div>
+                                                                    <div class="col">
+                                                                        <button type="button" class="btn btn-outline-dark">Configuración</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col">
+                                                        <div class="card border-light">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title text-start">BYD SEAL U DMI</h5>
+                                                                <p class="card-text text-start">El SUV familiar híbrido enchufable</p>
+                                                                <div class="d-flex">
+                                                                    <button type="button" class="btn btn-light" data-bs-toggle="button" style="color:#5f75c1; font-weight:bold;">Ver Promoción</button>
+                                                                </div>
+                                                                <img src="./webroot/images/BYD_SEAL_U_DMI.webp" alt="BYD SEAL U DMI" class="card-img-top">
+                                                                <div class="row g-0">
+                                                                    <div class="col">
+                                                                        <button type="button" class="btn btn-outline-dark">Detalles</button>
+                                                                    </div>
+                                                                    <div class="col">
+                                                                        <button type="button" class="btn btn-outline-dark">Configuración</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col">
+                                                        <div class="card border-light">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title text-start">BYD SEAL 6 DMI</h5>
+                                                                <p class="card-text text-start">La berlina híbrida enchufable</p>
+                                                                <div class="d-flex">
+                                                                    <button type="button" class="btn btn-light" data-bs-toggle="button" style="color:#5f75c1; font-weight:bold;">Ver Promoción</button>
+                                                                </div>
+                                                                <img src="./webroot/images/BYD-SEAL-6-DMI.webp" alt="BYD SEAL 6 DMI" class="card-img-top">
+                                                                <div class="row g-0">
+                                                                    <div class="col">
+                                                                        <button type="button" class="btn btn-outline-dark">Detalles</button>
+                                                                    </div>
+                                                                    <div class="col">
+                                                                        <button type="button" class="btn btn-outline-dark">Configuración</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col">
+                                                        <div class="card border-light">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title text-start">BYD SEAL 6 DMI TOURING</h5>
+                                                                <p class="card-text text-start">El familiar híbrido enchufable</p>
+                                                                <div class="d-flex">
+                                                                    <button type="button" class="btn btn-light" data-bs-toggle="button" style="color:#5f75c1; font-weight:bold;">Ver Promoción</button>
+                                                                </div>
+                                                                <img src="./webroot/images/BYD-SEAL-6-DMI-TOURING.webp" alt="BYD SEAL 6 DMI TOURING" class="card-img-top">
+                                                                <div class="row g-0">
+                                                                    <div class="col">
+                                                                        <button type="button" class="btn btn-outline-dark">Detalles</button>
+                                                                    </div>
+                                                                    <div class="col">
+                                                                        <button type="button" class="btn btn-outline-dark">Configuración</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div><!--CAPA 2-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item me-4">
+                            
+                        </li>
+                        <li class="nav-item me-4">
+                            <a class="nav-link nav-link1" href="#">Acerca de BYD</a>
+                        </li>
+                        <li class="nav-item me-4">
+                            <a class="nav-link nav-link1" href="#">Tecnologías</a>
+                        </li>
+                        <li class="nav-item me-4">
+                            <a class="nav-link nav-link1"  href="#">Compra</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link1"  href="#">Soporte</a>
+                        </li>
+                        <li class="nav-item opacity-0 espacio flex-grow-1">
+                            <a class="nav-link"></a>
+                        </li>
+                        <li class="nav-item nav-link2">
+                            <a class="nav-link" id="PruCon">Prueba de Conducción</a>
+                        </li>
+                        <li class="nav-item nav-link2">
+                            <a class="nav-link d-none d-xl-block">
+                                <i class="bi bi-geo-alt"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item nav-link2">
+                            <a class="nav-link" id="PruCon">Concesionarios</a>
+                        </li>
+                        <li class="nav-item nav-link2">
+                            <a class="nav-link d-none d-xl-block">
+                                <img src="./webroot/images/network-white.svg" alt="Icono de network blanco.">
+                            </a>
+                            <a class="nav-link d-xl-none d-block">
+                                <img src="./webroot/images/network-mob.svg" alt="Icono de network negro.">
+                            </a>
+                        </li>
+                        <li class="nav-item d-xl-none d-xl-block">
+                            <span class="w-25">
+                                <img class="iconoGlobalNegro" src="webroot/images/iconoGlobal 1.png" alt="Icono global negro">
+                            </span>
+                            <span class="text-black ms-3">Global</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="carouselExampleDark" class="carousel carousel-dark slide z-2" data-bs-ride="carousel">
+            <div class="carousel-indicators z-2">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="bg-light active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" class="bg-light" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" class="bg-light" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" class="bg-light" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" class="bg-light" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" class="bg-light" aria-label="Slide 6"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="6" class="bg-light" aria-label="Slide 7"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="7" class="bg-light" aria-label="Slide 8"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000">
+                    <img src="webroot/images/home_banner_1_inicio_promo_pc.webp" class="d-block w-100" alt="Imagen Inicio">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-white bg-transparent">Descuento hasta 14.325 €</h5>
+                        <p class="text-white bg-transparent">Incluye adelanto Plan Auto+. Solo hasta el 30/06</p>
+                        <button type="button" class="btn btn-outline-light">Ver promoción</button>
+                    </div>
+                </div>
+
+
+                <div class="carousel-item" data-bs-interval="5000">
+                    <video src="webroot/video/home_banner_2_atto3.mp4" class="d-block w-100 object-fit-contain" alt="BYD Atto3" autoplay loop preload="metadata"></video>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-white bg-transparent">Nuevo BYD ATTO 3 EVO</h5>
+                        <p class="text-white bg-transparent">Conduce la evolución eléctrica desde 29.355€.</p>
+                        <button type="button" class="btn btn-outline-light">Ver promoción</button>
+                    </div>
+                </div>
+
+
+                <div class="carousel-item" data-bs-interval="5000">
+                    <video src="webroot/video/home_banner_3_atto2_dmi.mp4" class="d-block w-100 object-fit-contain" alt="BYD Atto DMI" autoplay loop preload="metadata"></video>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-white bg-transparent">BYD ATTO2 DM-I</h5>
+                        <p class="text-white bg-transparent">No es un coche, es un BYD. Desde 20940€.</p>
+                        <button type="button" class="btn btn-outline-light">Ver promoción</button>
+                    </div>
+                </div>
+
+
+                <div class="carousel-item" data-bs-interval="5000">
+                    <video src="webroot/video/home_banner_4_dolphin.mp4" class="d-block w-100 object-fit-contain" alt="BYD Dolphin" autoplay loop preload="metadata"></video>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-white bg-transparent">BYD DOLPHIN SURF</h5>
+                        <p class="text-white bg-transparent">El eléctrico para todos desde 12995€.</p>
+                        <button type="button" class="btn btn-outline-light">Ver promoción</button>
+                    </div>
+                </div>
+
+
+                <div class="carousel-item" data-bs-interval="5000">
+                    <video src="webroot/video/home_banner_5_seal_dmi.mp4" class="d-block w-100 object-fit-contain" alt="BYD Seal DMI" autoplay loop preload="metadata"></video>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-white bg-transparent">BYD SEAL U DMI</h5>
+                        <p class="text-white bg-transparent">Desde 29990€ +1 año Seguro Auto Regalado.</p>
+                        <button type="button" class="btn btn-outline-light">Ver promoción</button>
+                    </div>
+                </div>
+
+
+                <div class="carousel-item" data-bs-interval="5000">
+                    <video src="webroot/video/home_banner_6_seal.mp4" class="d-block w-100 object-fit-contain" alt="BYD Seal" autoplay loop preload="metadata"></video>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-white bg-transparent">Sexto slide label</h5>
+                        <p class="text-white bg-transparent">Some representative placeholder content for the third slide.</p>
+                        <button type="button" class="btn btn-outline-light">Ver promoción</button>
+                    </div>
+                </div>
+
+
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="webroot/images/home_banner_7_atto2.webp" class="d-block w-100" alt="BYD Atto2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-white bg-transparent">BYD ATTO 2</h5>
+                        <p class="text-white bg-transparent">El SUV compacto eléctrico desde 149€ al mes.</p>
+                        <button type="button" class="btn btn-outline-light">Ver promoción</button>
+                    </div>
+                </div>
+
+
+                <div class="carousel-item">
+                    <video src="webroot/video/home_banner_8_sealion.mp4" class="d-block w-100 object-fit-contain" alt="BYD Seal Lion" autoplay loop preload="metadata"></video>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-white bg-transparent">BYD SEALION 7</h5>
+                        <p class="text-white bg-transparent">El SUV eléctrico de alto rendimiento desde 349€ al mes.</p>
+                        <button type="button" class="btn btn-outline-light">Ver promoción</button>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-black rounded" aria-hidden="true"></span>
+                <span class="visually-hidden bg-light">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-black rounded" aria-hidden="true"></span>
+                <span class="visually-hidden bg-light">Next</span>
+            </button>
+        </div>
+        <div class="container-fluid position-relative">
+            <video src="./webroot/video/VideoNuevoDesktopGamaNewUiV2.mp4" class="d-block w-100" alt="BYD Seal Lion" autoplay loop preload="metadata"></video>         
+            <div class="row w-100 d-flex g-4 justify-content-center position-absolute bottom-0 end-0  row-cols-lg-3 row-cols-md-2 row-cols-sm-1"><!--Div tecnología-->
+                <!--<div class="col">-->
+                    <div class="col card-top z-2 p-2 m-2 rounded-4 flex-shrink-1">
+                        <a>
+                            <span class="menu-item-header-icon">
+                                <!--IMAGEN SUPERIOR-->
+                                <img src="webroot/images/offers.webp" alt="" width="48" height="48">
+                            </span>
+                            <span class="text-white" style="font-weight:bold;">Tecnología</span>
+                        </a>
+                        <div class="d-flex">
+                            <div>Descrube las ofertas y descuentos exclusivos de BYD</div>
+                            <a>
+                                <img src="./webroot/images/IconoFlecha.svg" alt="FLECHA">
+                            </a>
+                        </div>
+                    </div>
+                <!--</div>-->
+                <!--<div class="col">-->
+                    <div class="col card-top z-2 p-2 m-2 rounded-4 flex-shrink-1">
+                        <a>
+                            <span class="menu-item-header-icon">
+                                <!--IMAGEN SUPERIOR-->
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="24" cy="24" r="24" fill="white"></circle>
+                                    <path
+                                        d="M23.0821 27C23.0468 27 23.011 26.9932 22.9772 26.9796C22.8658 26.9338 22.8061 26.8222 22.8344 26.7138L23.6783 23.4985L22.1393
+                                            22.7868C22.0284 22.7351 21.9742 22.6181 22.012 22.5097L23.1701 19.1624C23.2034 19.0658 23.3019 19 23.4128 19H26.7454C26.8399 
+                                            19 26.9269 19.0481 26.9712 19.1243C27.0149 19.2009 27.0084 19.2935 26.9547 19.3642L25.1457 21.7486L26.3889 22.4571C26.4485 
+                                            22.4906 26.4898 22.5455 26.5037 22.6077C26.5177 22.6703 26.5027 22.7356 26.4625 22.7877L23.2904 26.9016C23.2412 26.9651 23.1626 
+                                            27 23.0821 27Z"
+                                        fill="black"
+                                        fill-opacity="0.8"
+                                    ></path>
+                                    <path
+                                        d="M19.2881 22.8188C19.2881 20.0545 21.5299 17.8126 24.2942 17.8126C27.0593 17.8126 29.3004 20.0545 29.3004 22.8188C29.3004 25.517 
+                                        26.7691 27.7106 24.0964 27.8153V30.5603H30.1498V32.3133C30.1498 32.801 30.258 33 30.7279 33H35.5718C36.0417 33 36.1499 32.801 36.1499 
+                                        32.3133V25.0216C36.1499 24.6691 36.0688 23.9778 35.7163 23.3135L35.2634 22.3334C35.2634 22.3334 35.7051 21.6223 36.3281 21.6223C36.8212 
+                                        21.6223 37.8835 21.6223 37.8835 21.6223C38.2727 21.6223 38.5881 21.3066 38.5881 20.9178V20.3489C38.5881 19.8292 38.1668 19.4075 37.6467 
+                                        19.4075H36.4861C35.5768 19.4075 34.8402 20.1445 34.8402 21.0535V21.4183L32.8967 17.2152C32.3955 16.1632 31.7049 15 30.234 15H18.3536C16.8832 
+                                        15 16.1926 16.1632 15.6909 17.2152L13.7478 21.4183V21.0535C13.7478 20.1445 13.0113 19.4075 12.1019 19.4075H10.9414C10.4212 19.4075 10 19.8292 
+                                        10 20.3489V20.9178C10 21.3066 10.3153 21.6223 10.7045 21.6223C10.7045 21.6223 11.7669 21.6223 12.26 21.6223C12.883 21.6223 13.3247 22.3334 
+                                        13.3247 22.3334L12.8718 23.3135C12.5189 23.9778 12.4381 24.6691 12.4381 25.0216V32.3133C12.4381 32.801 12.5464 33 13.0163 33H17.8601C18.3297 
+                                        33 18.4379 32.801 18.4379 32.3133V30.5603H24.0964V27.8153C21.4244 27.7106 19.2881 25.517 19.2881 22.8188Z"
+                                        fill="black"
+                                        fill-opacity="0.8"
+                                    >
+                                    </path>
+                                </svg>
+                            </span>
+                            <span class="text-white" style="font-weight:bold;">Tecnología</span>
+                        </a>
+                        <div class="d-flex">
+                            <div>Descrube la tecnología híbrida enchufable DM-i</div>
+                            <a>
+                                <img src="./webroot/images/IconoFlecha.svg" alt="FLECHA">
+                            </a>
+                        </div>
+                    </div>
+                <!--</div>-->
+                <!--<div class="col">-->
+                    <div class="col card-top z-2 p-2 m-2 rounded-4 flex-shrink-1">
+                        <a>
+                            <span class="menu-item-header-icon">
+                                <!--IMAGEN SUPERIOR-->
+                                <img src="webroot/images/testdrive-icon.webp" alt="" width="48" height="48">
+                            </span>
+                            <span class="text-white" style="font-weight:bold;">Tecnología</span>
+                        </a>
+                        <div class="d-flex">
+                            <div>Encuentra tu concesionario oficial y ven a probar un BYD</div>
+                            <a>
+                                <img src="./webroot/images/IconoFlecha.svg" alt="FLECHA">
+                            </a>
+                        </div>
+                    </div>
+                <!--</div>-->
+            </div><!--Fin del div tecnología-->
+        </div>
+        <div class="container-fluid p-0 tecnologia position-relative h-100" style="height:160px">
+            <img src="./webroot/images/Tecnología.webp" alt="Tecnología" class="position-absolute z-0">
+            <div class="row position-relative z-1 text-center" style="height:100%;">
+                <p class="col-12 text-light fs-5 mt-5">Tecnología BYD</p>
+                <p class="col-12 text-light fs-1 fw-bold">Descubre la tecnología de BYD</p>
+                <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 g-4">
+                    <div class="col">
+                        <div class="card h-100 rounded-4 text-start">
+                            <img src="./webroot/images/Batería.webp" alt="Batería" class="card-img-top rounded-top-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Blade Battery</h5>
+                                <p class="card-text">
+                                    Batería LFP libre de cobalto diseñada para ofrecer máxima seguridad,
+                                    durabilidad y eficiencia, probada en condiciones extremas para garantizar
+                                    un rendimiento duradero y total tranquilidad. Su estructura optimiza el espacio,
+                                    mejora la disipación térmica y aumenta la resistencia frente a impactos y
+                                    sobrecalentamientos, ofreciendo una mayor vida útil y un desempeño fiable.
+                                </p>
+                            </div>
+                            <button type="button" class="btn sm text-bg-dark w-50 rounded-5 ms-3 mb-2 p-3 border-black Sabermas">Saber Más</button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 rounded-4 text-start">
+                            <img src="./webroot/images/Híbrido transparente.webp" alt="Coche transparente" class="card-img-top rounded-top-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Híbridos enchufables DM-i</h5>
+                                <p class="card-text">
+                                    Sistema híbrido enchufable con un enfoque principalmente eléctrico
+                                    que prioriza la conducción en modo EV para reducir consumo y emisiones.
+                                    El motor de combustión actúa como apoyo o generador cuando es necesario,
+                                    logrando una conducción eficiente, suave y optimizada para el uso diario,
+                                    además de un bajo consumo en condiciones reales.
+                                </p>
+                            </div>
+                            <button type="button" class="btn sm text-bg-dark w-50 rounded-5 ms-3 mb-2 p-3 border-black Sabermas">Saber Más</button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 rounded-4 text-start">
+                            <img src="./webroot/images/Plataforma.webp" alt="Plataforma" class="card-img-top rounded-top-4">
+                            <div class="card-body">
+                                <h5 class="card-title">e-platform 3.0 de BYD</h5>
+                                <p class="card-text">
+                                    Plataforma exclusiva para vehículos eléctricos que integra batería, sistema
+                                    de propulsión y control inteligente para maximizar la eficiencia, optimizar
+                                    el espacio y ofrecer una conducción eléctrica avanzada y de alto rendimiento.
+                                    Desarrollada por BYD, permite una mayor autonomía, mejor seguridad estructural
+                                    y una respuesta más precisa en la conducción.
+                                </p>
+                            </div>
+                            <button type="button" class="btn sm text-bg-dark w-50 rounded-5 ms-3 mb-2 p-3 border-black Sabermas">Saber Más</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-black p-0">
+            <iframe src="./doc/220527PlantillaDocumentaciónProyecto.pdf" frameborder="0" width="50%" height="900px"></iframe>
+        </div>
+        <div class="container-fluid bg-black p-5"><!--Pie de pagina-->
+            <div class="row mt-5">
+                <div class="col-4 w-25 h-auto">
+                    <img src="./webroot/images/Footer-Logo-BYD.webp" alt="Logo de BYD" class="img-fluid" style="display:block !important; width:50% !important; height:auto !important;">
+                </div>
+                <div class="col-8 text-secondary col8">
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="text-light">Modelos</h3>
+                            <p>BYD DOLPHIN SURF</p>
+                            <p>BYD ATTO 2</p>
+                            <p>BYD ATTO 2 DM-i</p>
+                            <p>BYD DOLPHIN</p>
+                            <p>BYD ATTO 3 EVO</p>
+                            <p>BYD SEAL</p>
+                            <p>BYD SEAL U</p>
+                            <p>BYD SEAL U DM-i</p>
+                            <p>BYD SEAL 6 DM-i</p>
+                            <p>BYD SEAL 6 DM-i TOURING</p>
+                            <p>BYD SEALION 7</p>
+                            <p>BYD TANG</p>
+                        </div>
+                        <div class="col">
+                            <h3 class="text-light">Acerca de BYD</h3>
+                            <p>Sobre BYD</p>
+                            <p>Noticias</p>
+                            <h3 class="text-light">Tecnologías</h3>
+                            <p>Tecnología DM-i</p>
+                            <p>e-Platform 3.0</p>
+                            <p>Blade Battery</p>
+                        </div>
+                        <div class="col">
+                            <h3 class="text-light">Compra</h3>
+                            <p>Prueba de conducción</p>
+                            <p>Encuentra tu concesionario</p>
+                            <p>Promociones</p>
+                            <p>BYD Connect</p>
+                        </div>
+                        <div class="col">
+                            <h3 class="text-light">Soporte</h3>
+                            <p>Mantenimiento de servicio</p>
+                            <p>Asistencia BYD</p>
+                            <p>Cómo BYD protege sus datos y su privacidad</p>
+                            <p>Iniciativa de sostenibilidad</p>
+                        </div>
+                    </div><!--Fin de row.-->
+                </div><!--Fin col de 8.-->
+            </div>
+            <div class="row RedesSociales">
+                
+            </div>
+            <div class="row derechos border-top border-secondary">
+                <div class="col-12 d-flex align-items-center ">
+                    <a class="der text-secondary">©️ 2024 BYD Europe B.V. Todos los derechos reservados.</a>
+                    <ul class="list-group list-group-horizontal">
+                        <li class="list-group-item bg-black border-0">
+                            <a href="#" class="der text-secondary">Privacidad e información legal</a>
+                        </li>
+                        <li class="list-group-item bg-black border-0">
+                            <a href="#" class="der text-secondary">Condiciones de uso</a>
+                        </li>
+                        <li class="list-group-item bg-black border-0">
+                            <a href="#" class="der text-secondary">Cookies</a>
+                        </li>
+                        <li class="list-group-item bg-black border-0">
+                            <a href="#" class="der text-secondary">RMI info</a>
+                        </li>
+                        <li class="list-group-item bg-black border-0">
+                            <a href="#" class="der text-secondary">Aviso Data Act</a>
+                        </li>
+                    </ul>
+                    <div>
+                        <span class="text-secondary">TOP</span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-39c33a77="">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.64787 5.47547C7.84235 5.28682 8.15765 5.28682 8.35213 5.47547L13 9.98415L12.2957 10.6673L8 6.50022L3.70426 10.6673L3 9.98415L7.64787 5.47547Z" fill="white" data-v-39c33a77=""></path>
+                        </svg>
+                    </div>
+                </div>
+            </div><!--Fin derechos-->
+        </div><!--Fin pie de pagina-->
+        <!-- CAROUSEL -->
+        <script src="webroot/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
