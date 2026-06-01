@@ -118,8 +118,12 @@ img{
 .col8{
     font-size:1.2rem !important;
 }
-.der{
+.der,.network{
     text-decoration:none;
+}
+.network:hover{
+    text-decoration:underline !important;
+    cursor:pointer;
 }
 .col8 p:hover,.der:hover{
     color:white !important;
@@ -128,6 +132,24 @@ img{
 }
 .der-border{
     border-top:2px solid rgb(102,101,101);
+}
+.Social-media img{
+    display:block;
+    width:24px;
+    &:hover{
+        filter:invert(1);
+        transition:all 0.5s ease-in-out;
+    }
+}
+.Contc::before{
+    content:"";
+    display:inline-block;
+    position:relative;
+    width:2px;
+    height:15px;
+    background-color:rgb(102,101,101);
+    margin-right:10px;
+    top:3px;
 }
 @media(width < 1200px){
     .opcMenus{
