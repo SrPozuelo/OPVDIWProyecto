@@ -16,7 +16,9 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search ms-auto " viewBox="0 0 16 16">
                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
                 </svg>
-                <img src="./webroot/images/bootstrap.png" alt="Logo de Bootstrap" class="img-fluid d-block mx-3" style="max-width:50px; height:auto;">
+                <a href="https://bootstrap21.org/es" target="_blank">
+                    <img src="./webroot/images/bootstrap.png" alt="Logo de Bootstrap"  class="img-fluid d-block mx-3" style="max-width:50px; height:auto;">
+                </a>
                 <div class="d-flex align-items-center">
                     <span class="w-25">
                         <img class="ms-4 iconoGlobal" src="webroot/images/iconoGlobal 1.png" alt="Icono global negro">
@@ -29,8 +31,10 @@
         <!--BARRA DE MENUS-->
         <nav class="navbar navbar-expand-xl position-sticky top-0 bg-white z-3" aria-label="Menú principal" id="navbarMenu">
             <div class="container-fluid contMenus">
-                <a class="navbar-brand me-4" href="#"><img src="webroot/images/logoBYD.svg" alt="Logo de BYD" onclick="window.location.reload()"></a>
-                <img src="./webroot/images/bootstrap.png" alt="Logo de Bootstrap" class="img-fluid d-block mx-3" style="max-width:50px; height:auto;">
+                <a class="navbar-brand me-4" href="https://www.byd.com/es-es" target="_blank"><img src="webroot/images/logoBYD.svg" alt="Logo de BYD"></a><!--onclick="window.location.reload()"-->
+                <a href="https://bootstrap21.org/es" target="_blank">
+                    <img src="./webroot/images/bootstrap.png" alt="Logo de Bootstrap" class="img-fluid d-block mx-3" style="max-width:50px; height:auto;">
+                </a>
                 <!--Lupa-->
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search ms-auto d-xl-none" viewBox="0 0 16 16">
                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
@@ -43,7 +47,7 @@
                     <ul class="navbar-nav d-xl-flex flex-grow-1 ms-xl-5">
                         <li class="nav-item me-3 liModelos">
                             <a class="nav-link nav-link1 active aModelos" data-bs-toggle="collapse" data-bs-target="#CapaModelos">Modelos</a>
-                            <div class="position-absolute container-fluid collapse bg-white d-none py-4 z-2" id="CapaModelos" role="menu">
+                            <div class="position-absolute container-fluid collapse bg-white d-none py-4 z-2" id="CapaModelos" role="menu" style="margin-top:0.5dvw !important; margin-left:-14.1dvw !important;">
                                 <div class="bg-white w-100 text-center" role="menuitem">
                                     <div class="row align-items-start">
                                         <div class="col-2">
@@ -377,8 +381,100 @@
                             <a class="nav-link" id="PruCon">Concesionarios</a>
                         </li>
                         <li class="nav-item nav-link2">
-                            <a class="nav-link d-none d-xl-block" data-bs-toggle="collapse" data-bs-target="#CapaNetwork">
+                            <a class="nav-link d-none d-xl-block aNetwork" data-bs-toggle="collapse" data-bs-target="#CapaNetwork">
                                 <img src="./webroot/images/network-white.svg" alt="Icono de network blanco.">
+                                <div class="position-absolute container-fluid collapse bg-white py-4 z-4 d-none w-100 h-50" id="CapaNetwork" role="menu">
+                                    <div class="bg-white text-center" role="menuitem">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <p class="text-end fs-5 collapse" data-bs-toggle="collapse" data-bs-target="#CapaNetwork">X</p>
+                                            </div>
+                                            <div class="col-12">
+                                                <p class="text-center">BYD Clobal</p>
+                                            </div>
+                                        </div>
+                                        <div class="row"><!--Inicio de Row de América.-->
+                                            <div class="col-12">
+                                                <p class="text-start">América</p>
+                                            </div>
+                                            <div class="col-3">
+                                                <a class="network d-block text-start" href="">Argentina</a>
+                                                <a class="network d-block text-start" href="">Chile</a>
+                                                <a class="network d-block text-start" href="">Ecuador</a>
+                                                <a class="network d-block text-start" href="">Panamá</a>
+                                                <a class="network d-block text-start" href="">Estados Unidos</a>
+                                            </div>
+                                            <div class="col-3">
+                                                <a class="network d-block text-start" href="">Bolivia</a>
+                                                <a class="network d-block text-start" href="">Colombia</a>
+                                                <a class="network d-block text-start" href="">El Salvador</a>
+                                                <a class="network d-block text-start" href="">Paraguay</a>
+                                                <a class="network d-block text-start" href="">Uruguay</a>
+                                            </div>
+                                            <div class="col-3">
+                                                <a class="network d-block text-start" href="">Brasil</a>
+                                                <a class="network d-block text-start" href="">Costa Rica</a>
+                                                <a class="network d-block text-start" href="">Guatemala</a>
+                                                <a class="network d-block text-start" href="">Perú</a>
+                                            </div>
+                                            <div class="col-3">
+                                                <a class="network d-block text-start" href="">Región Caribeña</a>
+                                                <a class="network d-block text-start" href="">República Dominicana</a>
+                                                <a class="network d-block text-start" href="">México</a>
+                                                <a class="network d-block text-start" href="">Las Bahamas</a>
+                                            </div>
+                                        </div><!--Final de Row de América.-->
+                                        <div class="row pt-5"><!--Inicio de Row de Europa-->
+                                            <div class="col-3">
+                                                <a class="network d-block text-start" href="">Austria</a>
+                                                <a class="network d-block text-start" href="">Dinamarca</a>
+                                                <a class="network d-block text-start" href="">Alemania</a>
+                                                <a class="network d-block text-start" href="">Paises bajos</a>
+                                                <a class="network d-block text-start" href="">Rumania</a>
+                                                <a class="network d-block text-start" href="">Suecia</a>
+                                                <a class="network d-block text-start" href="">Otra Europa</a>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="text-start">
+                                                    <span class="pe-5" style="color:rgb(102,101,101);">Bélgica</span>
+                                                    <a class="network" href="">EN &vert;</a>
+                                                    <a class="network" href="">NL &vert;</a>
+                                                    <a class="network" href="">FR</a>
+                                                </div>
+                                                <a class="network d-block text-start" href="">Estonia</a>
+                                                <a class="network d-block text-start" href="">Grecia</a>
+                                                <a class="network d-block text-start" href="">Noruega</a>
+                                                <a class="network d-block text-start" href="">Eslovaquia</a>
+                                                <div class="text-start">
+                                                    <span class="ps-2 pe-4" style="color:rgb(102,101,101);">Suiza</span>
+                                                    <a class="network" href="">DE &vert;</a>
+                                                    <a class="network" href="">FR &vert;</a>
+                                                    <a class="network" href="">IT</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <a class="network d-block text-start" href="">Croacia</a>
+                                                <div class="text-start">
+                                                    <span class="pe-5" style="color:rgb(102,101,101);">Finlandia</span>
+                                                    <a class="network" href="">FI &vert;</a>
+                                                    <a class="network" href="">EN</a>
+                                                </div>
+                                                <a class="network d-block text-start" href="">Hungria</a>
+                                                <a class="network d-block text-start" href="">Polonia</a>
+                                                <a class="network d-block text-start" href="">Eslovenia</a>
+                                                <a class="network d-block text-start" href="">Turquia</a>
+                                            </div>
+                                            <div class="col-3">
+                                                <a class="network d-block text-start" href="">República Checa</a>
+                                                <a class="network d-block text-start" href="">Francia</a>
+                                                <a class="network d-block text-start" href="">Italia</a>
+                                                <a class="network d-block text-start" href="">Portugal</a>
+                                                <a class="network d-block text-start" href="">España</a>
+                                                <a class="network d-block text-start" href="">Reino Unido</a>
+                                            </div>
+                                        </div><!--Final de Row de Europa-->
+                                    </div>
+                                </div>
                             </a>
                             <a class="nav-link d-xl-none d-block">
                                 <img src="./webroot/images/network-mob.svg" alt="Icono de network negro.">
@@ -394,49 +490,6 @@
                 </div>
             </div>
         </nav>
-        <div class="position-absolute container-fluid collapse bg-white py-4 z-4 d-block" id="CapaNetwork" role="menu">
-            <div class="bg-white w-100 h-50 text-center" role="menuitem">
-                <div class="row">
-                    <div class="col-12">
-                        <p class="text-end fs-5 collapse" data-bs-toggle="collapse" data-bs-target="#CapaNetwork">X</p>
-                    </div>
-                    <div class="col-12">
-                        <p class="text-center">BYD Clobal</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <p class="text-start">América</p>
-                    </div>
-                    <div class="col-3">
-                        <a class="network d-block text-start" href="">Argentina</a>
-                        <a class="network d-block text-start" href="">Chile</a>
-                        <a class="network d-block text-start" href="">Ecuador</a>
-                        <a class="network d-block text-start" href="">Panamá</a>
-                        <a class="network d-block text-start" href="">Estados Unidos</a>
-                    </div>
-                    <div class="col-3">
-                        <a class="network d-block text-start" href="">Bolivia</a>
-                        <a class="network d-block text-start" href="">Colombia</a>
-                        <a class="network d-block text-start" href="">El Salvador</a>
-                        <a class="network d-block text-start" href="">Paraguay</a>
-                        <a class="network d-block text-start" href="">Uruguay</a>
-                    </div>
-                    <div class="col-3">
-                        <a class="network d-block text-start" href="">Brasil</a>
-                        <a class="network d-block text-start" href="">Costa Rica</a>
-                        <a class="network d-block text-start" href="">Guatemala</a>
-                        <a class="network d-block text-start" href="">Perú</a>
-                    </div>
-                    <div class="col-3">
-                        <a class="network d-block text-start" href="">Región Caribeña</a>
-                        <a class="network d-block text-start" href="">República Dominicana</a>
-                        <a class="network d-block text-start" href="">México</a>
-                        <a class="network d-block text-start" href="">Las Bahamas</a>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div id="carouselExampleDark" class="carousel carousel-dark slide z-2" data-bs-ride="carousel">
             <div class="carousel-indicators z-2">
                 <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="bg-light active" aria-current="true" aria-label="Slide 1"></button>
@@ -681,7 +734,9 @@
         <div class="container-fluid bg-black p-5"><!--Pie de pagina-->
             <div class="row mt-5">
                 <div class="col-4 w-25 h-auto">
-                    <img src="./webroot/images/Footer-Logo-BYD.webp" alt="Logo de BYD" class="img-fluid" style="display:block !important; width:50% !important; height:auto !important;">
+                    <a href="https://www.byd.com/es-es" target="_blank">
+                        <img src="./webroot/images/Footer-Logo-BYD.webp" alt="Logo de BYD" class="img-fluid" style="display:block !important; width:50% !important; height:auto !important;">
+                    </a>
                 </div>
                 <div class="col-8 text-secondary col8">
                     <div class="row">
@@ -722,6 +777,10 @@
                             <p>Asistencia BYD</p>
                             <p>Cómo BYD protege sus datos y su privacidad</p>
                             <p>Iniciativa de sostenibilidad</p>
+                            <h3 class="text-light" style="color:#7911f7 !important;">BOOTSTRAP</h3>
+                            <a class="d-block aBootstrap mb-3" target="_blank" href="./doc/040626PlantillaDocumentaciónProyecto.pdf">Documentación</a>
+                            <a class="d-block aBootstrap mb-3" target="_blank" href="./doc/ProyectoDeBYDConBootstrap.pdf">Presentación</a>
+                            <a class="d-block aBootstrap"      target="_blank" href="https://github.com/SrPozuelo/OPVDIWProyecto">Repositorio</a>
                         </div>
                     </div><!--Fin de row.-->
                 </div><!--Fin col de 8.-->

@@ -28,6 +28,13 @@ body:has(.aModelos:hover) #CapaModelos{
 body:has(#CapaModelos:hover) #CapaModelos{
     display:block !important;
 }
+body:has(.aNetwork:hover) #CapaNetwork{
+    display:block !important;
+    cursor:pointer;
+}
+body:has(#CapaNetwork:hover) #CapaNetwork{
+    display:block !important;
+}
 .nav-link3,.nav-link4{
     display:block;
     position:relative;
@@ -125,7 +132,7 @@ img{
     text-decoration:underline !important;
     cursor:pointer;
 }
-.col8 p:hover,.der:hover{
+.col8 p:hover,.der:hover, a:hover{
     color:white !important;
     cursor:pointer;
     transition:all 0.5s ease-in-out;
@@ -150,6 +157,10 @@ img{
     background-color:rgb(102,101,101);
     margin-right:10px;
     top:3px;
+}
+.aBootstrap{
+    text-decoration:none;
+    color:rgb(102,101,101);
 }
 @media(width < 1200px){
     .opcMenus{
