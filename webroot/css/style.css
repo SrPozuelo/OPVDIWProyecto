@@ -1,3 +1,6 @@
+body{
+    min-width:380px !important;
+}
 .bi-search{
     color: white;    
 }
@@ -9,9 +12,9 @@
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255,255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 .iconoGlobalNegro{
-    width:16px;
-    height:16px;
-    transform:rotate(180deg);
+    width:24px !important;
+    height:24px !important;
+    transform:rotate(180deg) !important;
 }
 .iconoGlobal{
     width:16px;
@@ -26,6 +29,13 @@ body:has(.aModelos:hover) #CapaModelos{
     display:block !important;
 }
 body:has(#CapaModelos:hover) #CapaModelos{
+    display:block !important;
+}
+body:has(.aNetwork:hover) #CapaNetwork{
+    display:block !important;
+    cursor:pointer;
+}
+body:has(#CapaNetwork:hover) #CapaNetwork{
     display:block !important;
 }
 .nav-link3,.nav-link4{
@@ -71,7 +81,7 @@ body:has(#CapaModelos:hover) #CapaModelos{
 }
 .card-top{
     min-width: 330px !important;
-    max-width: 500px;
+    max-width: 400px;
     height: 130px !important;
     background-color:rgba(179,179,178,0.719) !important;
     top:10px;
@@ -98,8 +108,62 @@ body:has(.hib-enchu:hover) .capa2{
     color: white !important;   
     text-decoration: none  !important;
 }
+.tecnologia{
+    background-size:100% 100%;
+    background-position:center top;
+    background-repeat:no-repeat;
+}
+img{
+    display:block;
+    max-width:100%;
+}
 #carouselExampleDark{
     top:0px !important;
+}
+.Sabermas:hover{
+    background-color:white !important;
+    color:black !important;
+    transition:all .5s;
+}
+.col8{
+    font-size:1.2rem !important;
+}
+.der,.network{
+    text-decoration:none;
+}
+.network:hover{
+    text-decoration:underline !important;
+    cursor:pointer;
+}
+.col8 p:hover,.der:hover, a:hover{
+    color:white !important;
+    cursor:pointer;
+    transition:all 0.5s ease-in-out;
+}
+.der-border{
+    border-top:2px solid rgb(102,101,101);
+}
+.Social-media img{
+    display:block;
+    width:24px;
+    &:hover{
+        filter:invert(1);
+        transition:all 0.5s ease-in-out;
+    }
+}
+.Contc::before{
+    content:"";
+    display:inline-block;
+    position:relative;
+    width:2px;
+    height:15px;
+    background-color:rgb(102,101,101);
+    margin-right:10px;
+    top:3px;
+}
+.aBootstrap{
+    text-decoration:none;
+    color:rgb(102,101,101);
 }
 @media(width < 1200px){
     .opcMenus{
@@ -155,5 +219,4 @@ body:has(.hib-enchu:hover) .capa2{
         width:200px;
         margin-left:250px !important;
     }
-    
 }
