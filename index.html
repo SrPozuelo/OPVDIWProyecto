@@ -381,10 +381,11 @@
                             <a class="nav-link" id="PruCon">Concesionarios</a>
                         </li>
                         <li class="nav-item nav-link2">
+                            <!--Capa network-->
                             <a class="nav-link d-none d-xl-block aNetwork" data-bs-toggle="collapse" data-bs-target="#CapaNetwork">
                                 <img src="./webroot/images/network-white.svg" alt="Icono de network blanco.">
                                 <div class="position-absolute container-fluid collapse bg-white py-4 z-4 d-none w-100 h-50" id="CapaNetwork" role="menu">
-                                    <div class="bg-white text-center" role="menuitem">
+                                    <div class="bg-white text-center" role="menuitem" style="margin-left:-100dvw !important;">
                                         <div class="row">
                                             <div class="col-12">
                                                 <p class="text-end fs-5 collapse" data-bs-toggle="collapse" data-bs-target="#CapaNetwork">X</p>
@@ -476,13 +477,14 @@
                                     </div>
                                 </div>
                             </a>
+                            <!--Fin de capa network-->
                             <a class="nav-link d-xl-none d-block">
                                 <img src="./webroot/images/network-mob.svg" alt="Icono de network negro.">
                             </a>
                         </li>
                         <li class="nav-item d-xl-none d-xl-block">
                             <span class="w-25">
-                                <img class="iconoGlobalNegro" src="webroot/images/iconoGlobal 1.png" alt="Icono global negro">
+                                <img class="iconoGlobalNegro" src="webroot/images/iconoGlobalNegro.png" alt="Icono global negro">
                             </span>
                             <span class="text-black ms-3">Global</span>
                         </li>
@@ -590,11 +592,12 @@
                 <span class="visually-hidden bg-light">Next</span>
             </button>
         </div>
-        <div class="container-fluid position-relative p-0">
-            <video src="./webroot/video/VideoNuevoDesktopGamaNewUiV2.mp4" class="d-block w-100" alt="BYD Seal Lion" autoplay loop preload="metadata"></video>         
+        <!--Card Card top-->
+        <div class="container-fluid position-relative p-0 video-container h-auto overflow-hidden d-flex align-items-center justify-content-center">
+            <video src="./webroot/video/VideoNuevoDesktopGamaNewUiV2.mp4" class="d-block w-100 h-100" alt="BYD Seal Lion" autoplay loop muted preload="metadata"></video>         
             <div class="row w-100 d-flex g-4 justify-content-center position-absolute bottom-0 end-0  row-cols-lg-3 row-cols-md-2 row-cols-sm-1"><!--Div tecnología-->
                 <!--<div class="col">-->
-                    <div class="col card-top z-2 p-2 m-2 rounded-4 flex-shrink-1">
+                    <div class="col-3 card-top p-2 m-2 rounded-4 flex-shrink-1 d-flex flex-column justify-content-between">
                         <a>
                             <span class="menu-item-header-icon">
                                 <!--IMAGEN SUPERIOR-->
@@ -611,7 +614,7 @@
                     </div>
                 <!--</div>-->
                 <!--<div class="col">-->
-                    <div class="col card-top z-2 p-2 m-2 rounded-4 flex-shrink-1">
+                    <div class="card-top p-2 m-2 rounded-4 flex-shrink-1 d-flex flex-column justify-content-between">
                         <a>
                             <span class="menu-item-header-icon">
                                 <!--IMAGEN SUPERIOR-->
@@ -653,7 +656,7 @@
                     </div>
                 <!--</div>-->
                 <!--<div class="col">-->
-                    <div class="col card-top z-2 p-2 m-2 rounded-4 flex-shrink-1">
+                    <div class="card-top p-2 m-2 rounded-4 flex-shrink-1 d-flex flex-column justify-content-between">
                         <a>
                             <span class="menu-item-header-icon">
                                 <!--IMAGEN SUPERIOR-->
@@ -671,7 +674,9 @@
                 <!--</div>-->
             </div><!--Fin del div tecnología-->
         </div>
-        <div class="container-fluid p-0 tecnologia" style="height:auto">
+        <!--Fin de Card Card top-->
+        <!--Capa tecnología-->
+        <div class="container-fluid p-0 tecnologia bg-secondary" style="height:auto">
             <img src="./webroot/images/Tecnología.webp" alt="Tecnología" class="position-absolute z-0" style="width:100dvw; height:86%;">
             <div class="row position-relative z-1 text-center" style="height:100%;">
                 <p class="col-12 text-light fs-5 mt-5">Tecnología BYD</p>
@@ -728,10 +733,11 @@
                 </div>
             </div>
         </div>
+        <!--Fin de capa tecnología.-->
         <!--<div class="container-fluid p-0">
             <iframe src="./doc/220527PlantillaDocumentaciónProyecto.pdf" frameborder="0" width="50%" height="900px"></iframe>
         </div>-->
-        <div class="container-fluid bg-black p-5"><!--Pie de pagina-->
+        <div class="container-fluid bg-black p-5 z-3 position-relative"><!--Pie de pagina-->
             <div class="row mt-5">
                 <div class="col-4 w-25 h-auto">
                     <a href="https://www.byd.com/es-es" target="_blank">
@@ -777,8 +783,8 @@
                             <p>Asistencia BYD</p>
                             <p>Cómo BYD protege sus datos y su privacidad</p>
                             <p>Iniciativa de sostenibilidad</p>
-                            <h3 class="text-light" style="color:#7911f7 !important;">BOOTSTRAP</h3>
-                            <a class="d-block aBootstrap mb-3" target="_blank" href="./doc/040626PlantillaDocumentaciónProyecto.pdf">Documentación</a>
+                            <h3 class="text-primary">BOOTSTRAP</h3>
+                            <a class="d-block aBootstrap mb-3" target="_blank" href="./doc/050626PlantillaDocumentaciónProyecto.pdf">Documentación</a>
                             <a class="d-block aBootstrap mb-3" target="_blank" href="./doc/ProyectoDeBYDConBootstrap.pdf">Presentación</a>
                             <a class="d-block aBootstrap"      target="_blank" href="https://github.com/SrPozuelo/OPVDIWProyecto">Repositorio</a>
                         </div>
