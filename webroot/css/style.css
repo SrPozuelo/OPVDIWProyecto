@@ -165,6 +165,9 @@ img{
     text-decoration:none;
     color:rgb(102,101,101);
 }
+#CapaModelos{
+    overflow-y:scroll;
+}
 @media(width < 1200px){
     .opcMenus{
         background-color:white;
