@@ -19,3 +19,12 @@
 >5. Eficiencia en el Desarrollo: Demostrar cómo el uso de un framework reduce los tiempos de producción frente al CSS puro (Vanilla CSS).
 
 >6. Documentación Técnica: Redactar una memoria que detalle la estructura de archivos, las dependencias utilizadas (como iconos de FontAwesome o Google Fonts) y la lógica del diseño.
+
+## URLs y CDNs
+
+| DESCRIPCIÓN |                                                                 URL CDN DE BOOTSTRAP                                                               |
+| :---------: | :------------------------------------------------------------------------------------------------------------------------------------------------: |
+|     CSS     | [https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css](https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css) |
+|     JS      |     [cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js](cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js)   |
+
+URL del proyecto de Bootstrap: [https://oscarpozvil.ieslossauces.es/OPVDIWProyecto/index.html](https://oscarpozvil.ieslossauces.es/OPVDIWProyecto/index.html)
