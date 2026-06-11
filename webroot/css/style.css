@@ -169,7 +169,11 @@ img{
     color:rgb(102,101,101);
 }
 #CapaModelos{
+    box-sizing:content-box;
     overflow-y:scroll;
+}
+.nwW:hover{
+    cursor:pointer;
 }
 @media(width < 1200px){
     .opcMenus{
