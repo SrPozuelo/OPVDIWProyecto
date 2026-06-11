@@ -25,7 +25,7 @@ body{
     position:sticky !important;
     top:100px !important;
 }*/
-body:has(.aModelos:hover) #CapaModelos{
+/*body:has(.aModelos:hover) #CapaModelos{
     display:block !important;
 }
 body:has(#CapaModelos:hover) #CapaModelos{
@@ -37,7 +37,7 @@ body:has(.aNetwork:hover) #CapaNetwork{
 }
 body:has(#CapaNetwork:hover) #CapaNetwork{
     display:block !important;
-}
+}*/
 .nav-link3,.nav-link4{
     display:block;
     position:relative;
@@ -135,13 +135,16 @@ img{
     text-decoration:underline !important;
     cursor:pointer;
 }
-.col8 p:hover,.der:hover, a:hover{
+.col8 p:hover,.der:hover a:hover{
     color:white !important;
     cursor:pointer;
     transition:all 0.5s ease-in-out;
 }
 .der-border{
     border-top:2px solid rgb(102,101,101);
+}
+.Social-media{
+    width:300px;
 }
 .Social-media img{
     display:block;
@@ -166,7 +169,11 @@ img{
     color:rgb(102,101,101);
 }
 #CapaModelos{
+    box-sizing:content-box;
     overflow-y:scroll;
+}
+.nwW:hover{
+    cursor:pointer;
 }
 @media(width < 1200px){
     .opcMenus{
